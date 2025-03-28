@@ -1,8 +1,0 @@
-
-Versie 		Datum		Wijziging 						Door 		Aanvrager
-
-
-
-Rid 1.0.22	22-01-2015	tbv DistributionManagement doorgeven ReturnReferenceNr aan MF 
-		20-01-2015	UUID toegevoegd aan sheet Rid-FulfilmentOrder-v1.13.0	K.Duvekot 	M.OVereem
-		22-01-2015	UUID toegevoegd aan xsd FFO-orderlinereference		D.Lub		K.Duvekot
