@@ -64,7 +64,7 @@ public class Program
 
         app.ConfigureSwaggerUI();
 
-        app.AddOmsCoreWebApiLifeTime("Audit Trail Api");
+        app.AddOmsCoreWebApiLifeTime("Loyalty");
 
         using var scope = app.Services.CreateScope();
 

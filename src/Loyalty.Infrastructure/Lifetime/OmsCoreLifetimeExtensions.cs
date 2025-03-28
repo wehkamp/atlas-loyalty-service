@@ -9,15 +9,15 @@ public static class OmsCoreLifetimeExtensions
     {
         webApplication.Lifetime.ApplicationStarted.Register(() =>
         {
-            webApplication.Logger.LogInformation("OMS Core {apiName} started", apiName);
+            webApplication.Logger.LogInformation("{apiName} started", apiName);
         });
         webApplication.Lifetime.ApplicationStopping.Register(() =>
         {
-            webApplication.Logger.LogInformation("OMS Core {apiName} stopping", apiName);
+            webApplication.Logger.LogInformation("{apiName} stopping", apiName);
         });
         webApplication.Lifetime.ApplicationStopped.Register(() =>
         {
-            webApplication.Logger.LogInformation("OMS Core {apiName} stopped", apiName);
+            webApplication.Logger.LogInformation("{apiName} stopped", apiName);
         });
     }
 
@@ -27,15 +27,15 @@ public static class OmsCoreLifetimeExtensions
 
         webApplication.Lifetime.ApplicationStarted.Register(() =>
         {
-            webApplication.Logger.LogInformation("OMS Core KafkaProcessors started group: {consumerGroup} for topics: {topics}", consumerGroup, topicsString);
+            webApplication.Logger.LogInformation("KafkaProcessors started group: {consumerGroup} for topics: {topics}", consumerGroup, topicsString);
         });
         webApplication.Lifetime.ApplicationStopping.Register(() =>
         {
-            webApplication.Logger.LogInformation("OMS Core KafkaProcessors stopping group: {consumerGroup} for topics: {topics}", consumerGroup, topicsString);
+            webApplication.Logger.LogInformation("KafkaProcessors stopping group: {consumerGroup} for topics: {topics}", consumerGroup, topicsString);
         });
         webApplication.Lifetime.ApplicationStopped.Register(() =>
         {
-            webApplication.Logger.LogInformation("OMS Core KafkaProcessors stopped group: {consumerGroup} for topics: {topics}", consumerGroup, topicsString);
+            webApplication.Logger.LogInformation("KafkaProcessors stopped group: {consumerGroup} for topics: {topics}", consumerGroup, topicsString);
         });
     }
 }

@@ -19,10 +19,10 @@ public static class SwaggerExtensions
             options.SwaggerDoc(
                 "v1", new OpenApiInfo
                 {
-                    Title = "OMS Core Audit Trail API",
+                    Title = "Loyalty Service API",
                     Version = "v1",
-                    Description = "OMS Core Audit Trail API contains all audit trailing information of orders and users.",
-                    Contact = new OpenApiContact { Name = "Team Order Management", Url = new Uri("https://wehkampretailgroup.atlassian.net/wiki/spaces/TOM/overview?homepageId=42401795") }
+                    Description = "Loyalty Service API contains all audit trailing information of orders and users.",
+                    Contact = new OpenApiContact { Name = "Juliette Roodhardt", Url = new Uri("https://wehkampretailgroup.atlassian.net/wiki/spaces/TOM/overview?homepageId=42401795") }
                 });
             options.CustomSchemaIds(type => type.ToString());
             options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
