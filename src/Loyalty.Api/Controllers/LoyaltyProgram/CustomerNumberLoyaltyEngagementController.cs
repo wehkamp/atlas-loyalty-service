@@ -18,7 +18,7 @@ public class CustomerNumberLoyaltyEngagementController : ControllerBase
     [Consumes("application/json")]
     [Produces("application/json")]
     [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(string))]
-    public async Task<IActionResult> PostLoyaltyCodes([FromBody] string customerNumber)
+    public async Task<IActionResult> PostLoyaltyCodes([FromQuery] string customerNumber)
     {
         // Does this need to be from our database or the coupon database?
         await Task.Delay(1);
