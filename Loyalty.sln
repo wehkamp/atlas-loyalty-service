@@ -44,10 +44,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loyalty.KafkaProcessors", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loyalty.Domain.UnitTests", "test\Loyalty.Domain.UnitTests\Loyalty.Domain.UnitTests.csproj", "{D771853F-ED8D-4B4B-B02A-A6F655720B95}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Common.Storage.AWS.S3bucket", "src\OMS.Common.Storage.AWS.S3bucket\OMS.Common.Storage.AWS.S3bucket.csproj", "{C5B3BC74-E96A-4324-8B5C-08A1C70EE832}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OMS.Common.Mapper", "src\OMS.Common.Mapper\OMS.Common.Mapper.csproj", "{5C341F01-14E2-43C7-924C-E218E1980403}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,14 +86,6 @@ Global
 		{D771853F-ED8D-4B4B-B02A-A6F655720B95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D771853F-ED8D-4B4B-B02A-A6F655720B95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D771853F-ED8D-4B4B-B02A-A6F655720B95}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C5B3BC74-E96A-4324-8B5C-08A1C70EE832}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C5B3BC74-E96A-4324-8B5C-08A1C70EE832}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C5B3BC74-E96A-4324-8B5C-08A1C70EE832}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C5B3BC74-E96A-4324-8B5C-08A1C70EE832}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5C341F01-14E2-43C7-924C-E218E1980403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5C341F01-14E2-43C7-924C-E218E1980403}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5C341F01-14E2-43C7-924C-E218E1980403}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5C341F01-14E2-43C7-924C-E218E1980403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -112,8 +100,6 @@ Global
 		{C02B4A99-C91D-45B8-9045-882C0D959472} = {AD3A5F61-2AFE-4F53-8D1F-C7C9A02CF4FF}
 		{4AA383DC-3591-4AFD-AA38-78E870F313A6} = {B2839838-BFEB-47C3-80F4-2A0A4BD0DF57}
 		{D771853F-ED8D-4B4B-B02A-A6F655720B95} = {AD3A5F61-2AFE-4F53-8D1F-C7C9A02CF4FF}
-		{C5B3BC74-E96A-4324-8B5C-08A1C70EE832} = {5334D014-E514-4F05-9B51-1AB0E0F6D834}
-		{5C341F01-14E2-43C7-924C-E218E1980403} = {5334D014-E514-4F05-9B51-1AB0E0F6D834}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {01D56C29-786A-47CB-B4B6-4AD52A3AE43F}
