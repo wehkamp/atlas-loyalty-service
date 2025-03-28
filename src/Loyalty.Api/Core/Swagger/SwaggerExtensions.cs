@@ -22,7 +22,7 @@ public static class SwaggerExtensions
                     Title = "Loyalty Service API",
                     Version = "v1",
                     Description = "Loyalty Service API contains all audit trailing information of orders and users.",
-                    Contact = new OpenApiContact { Name = "Juliette Roodhardt", Url = new Uri("https://wehkampretailgroup.atlassian.net/wiki/spaces/TOM/overview?homepageId=42401795") }
+                    Contact = new OpenApiContact { Name = "Juliette & Robin", Url = new Uri("https://wehkampretailgroup.atlassian.net/wiki/spaces/TOM/overview?homepageId=42401795") }
                 });
             options.CustomSchemaIds(type => type.ToString());
             options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
