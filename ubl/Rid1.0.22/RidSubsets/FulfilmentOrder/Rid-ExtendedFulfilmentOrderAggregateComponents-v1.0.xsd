@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 (http://www.altova.com) by R. Overkamp (Wehkamp BV) -->
+<!--Revision info: $Id: Rid-ExtendedFulfilmentOrderAggregateComponents-v1.0.xsd 522 2012-03-08 16:19:32Z dlub $-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cbc="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" xmlns="http://schemas.rfsholding.com/rid/ExtendedFulfilmentOrderAggregateComponents/v1.0" xmlns:udt="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" xmlns:qdt="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" 
+xmlns:cac="http://schemas.rfsholding.com/rid/FulfilmentOrderAggregateComponents/v1.0" xmlns:ecbc="http://schemas.rfsholding.com/rid/ExtendedFulfilmentOrderBasicComponents/v1.0" xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="http://schemas.rfsholding.com/rid/ExtendedFulfilmentOrderAggregateComponents/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" schemaLocation="../common/Rid-UnqualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" schemaLocation="../common/Rid-QualifiedDataTypes-v1.0.xsd"/>	
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" schemaLocation="../common/Rid-CommonBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedFulfilmentOrderBasicComponents/v1.0" schemaLocation="Rid-ExtendedFulfilmentOrderBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/FulfilmentOrderAggregateComponents/v1.0" schemaLocation="Rid-FulfilmentOrderAggregateComponents-v1.0.xsd"/>
+	<xsd:element name="DespatchLine" type="DespatchLineType"/>
+	<xsd:complexType name="DespatchLineType">
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID"/>
+			<xsd:element ref="cac:Location"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

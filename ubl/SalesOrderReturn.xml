@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gm:GenericMessage xmlns:gm="http://schemas.rfsholding.com/rid/GenericMessage/v1.0" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ns4="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:oc="urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2">
+	<Header>
+		<AdministrationID>012</AdministrationID>
+		<SourceSystemCode>RFS.TRC</SourceSystemCode>
+		<BusinessTransactionID>f63ee16a-6689-4155-b304-afcca51519d1</BusinessTransactionID>
+		<BusinessEntityID>4229955071</BusinessEntityID>
+		<MessageType>SalesOrder</MessageType>
+		<MessageDateTime>2021-12-09T10:14:28.724Z</MessageDateTime>
+		<RoutingInformation>
+			<Property>
+				<Key>UBLVersionID</Key>
+				<Value>2.1</Value>
+			</Property>
+			<Property>
+				<Key>CustomizationID</Key>
+				<Value>2.0</Value>
+			</Property>
+			<Property>
+				<Key>ProfileID</Key>
+				<Value>rid</Value>
+			</Property>
+		</RoutingInformation>
+	</Header>
+	<Body>
+		<oc:OrderChange>
+			<cbc:UBLVersionID schemeID="UBL">2.1</cbc:UBLVersionID>
+			<cbc:CustomizationID schemeID="RFS">2.0</cbc:CustomizationID>
+			<cbc:ProfileID schemeID="RFS">rid</cbc:ProfileID>
+			<cbc:ID schemeID="RFS.TRC">4229955071</cbc:ID>
+			<cbc:IssueDate>2021-12-09</cbc:IssueDate>
+			<cbc:IssueTime>10:14:28.681Z</cbc:IssueTime>
+			<cbc:SequenceNumberID schemeID="RFS.TRC">0</cbc:SequenceNumberID>
+			<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+			<cbc:LineCountNumeric>1.00</cbc:LineCountNumeric>
+			<cac:OrderReference>
+				<cbc:ID schemeID="RFS.TRC">4229955071</cbc:ID>
+				<cbc:OrderTypeCode>SalesOrderReturn</cbc:OrderTypeCode>
+			</cac:OrderReference>
+			<cac:BuyerCustomerParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.DAX">1001</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:BuyerCustomerParty>
+			<cac:SellerSupplierParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.DAX">012</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:SellerSupplierParty>
+			<cac:OrderLine>
+				<cac:LineItem>
+					<cbc:ID schemeID="RFS.TRC">4229998581</cbc:ID>
+					<cbc:LineStatusCode>Added</cbc:LineStatusCode>
+					<cbc:Quantity unitCode="EA">1.00</cbc:Quantity>
+					<cac:Delivery>
+						<cac:Despatch>
+							<cac:DespatchLocation>
+								<cbc:ID schemeID="RFS.DAX">ZWO</cbc:ID>
+								<cbc:LocationTypeCode>Site</cbc:LocationTypeCode>
+							</cac:DespatchLocation>
+						</cac:Despatch>
+					</cac:Delivery>
+					<cac:Item>
+						<cac:BuyersItemIdentification>
+							<cbc:ID schemeID="RFS.DAX">991970</cbc:ID>
+							<cbc:ExtendedID schemeID="RFS.DAX">391</cbc:ExtendedID>
+						</cac:BuyersItemIdentification>
+					</cac:Item>
+					<cac:LineReference>
+						<cbc:LineID schemeID="RFS.TRC">4229998518</cbc:LineID>
+						<cbc:LineStatusCode>Return</cbc:LineStatusCode>
+						<cac:DocumentReference>
+							<cbc:ID schemeID="RFS.TRC">4229955031</cbc:ID>
+							<cbc:DocumentTypeCode>SalesOrder</cbc:DocumentTypeCode>
+						</cac:DocumentReference>
+					</cac:LineReference>
+				</cac:LineItem>
+			</cac:OrderLine>
+		</oc:OrderChange>
+	</Body>
+</gm:GenericMessage>

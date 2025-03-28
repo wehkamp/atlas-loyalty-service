@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 sp1 (http://www.altova.com) by Wehkamp BV (Wehkamp BV) -->
+<!--Revision info: $Id: Rid-ExtendedPurchaseOrderAggregateComponents-v1.0.xsd 806 2012-10-18 11:19:09Z dlub $-->
+<xsd:schema
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+ xmlns:qdt="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0"
+xmlns:udt="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0"
+ xmlns:cbc="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0"
+   xmlns:cac="http://schemas.rfsholding.com/rid/PurchaseOrderAggregateComponents/v1.0"
+    xmlns:ecbc="http://schemas.rfsholding.com/rid/ExtendedPurchaseOrderBasicComponents/v1.0" 
+     xmlns="http://schemas.rfsholding.com/rid/ExtendedPurchaseOrderAggregateComponents/v1.0"
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="http://schemas.rfsholding.com/rid/ExtendedPurchaseOrderAggregateComponents/v1.0"
+     elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+    
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" schemaLocation="../common/Rid-UnqualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" schemaLocation="../common/Rid-QualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" schemaLocation="../common/Rid-CommonBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/PurchaseOrderAggregateComponents/v1.0" schemaLocation="Rid-PurchaseOrderAggregateComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedPurchaseOrderBasicComponents/v1.0" schemaLocation="Rid-ExtendedPurchaseOrderBasicComponents-v1.0.xsd"/>
+	
+	<xsd:element name="LineItem" type="LineItemType"/>
+	<xsd:element name="SubLineItem" type="LineItemType"/>
+	<xsd:element name="OrderLine" type="OrderLineType"/>
+	<xsd:element name="Price" type="PriceType"/>
+	<xsd:element name="QuantityPrice" type="QuantityPriceType"/>
+	<xsd:element name="ReceiptLocation" type="cac:LocationType"/>
+	<xsd:complexType name="OrderLineType">
+		<xsd:sequence>
+			<xsd:element ref="LineItem"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LineItemType">
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID"/>
+			<xsd:element ref="ecbc:FunctionalLineStatusCode"/>
+			<xsd:element ref="cac:DeliveryLocation" minOccurs="0"/>
+			<xsd:element ref="cac:OrderLineReference" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Price" minOccurs="0"/>
+			<xsd:element ref="QuantityPrice" minOccurs="0"/>
+			<xsd:element ref="SubLineItem" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PriceType">
+		<xsd:sequence>
+			<xsd:element ref="cbc:BaseAmount"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="QuantityPriceType">
+		<xsd:sequence>
+			<xsd:element ref="ecbc:QuantityPriceAmount"/>
+			<xsd:element ref="cac:AllowanceCharge" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="cac:TaxTotal"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Revision info: $Id: Rid-InventoryReport-v1.0.xsd 806 2012-10-18 11:19:09Z dlub $-->
+<!-- change history
+    date 					change  														    requestor			author			sheet
+    06-02-2012		spreadsheet versioen 1.7									stokman			dlub
+    05-03-2012        spreadsheet version 1.8.0 as result of meeting 05-03-2012			dlub				1.8.x
+    13-04-2012		rename extCont.DataType ( in stead of Datatype)				dlub
+    09-10-2012		changed order of imports									biztalk/snefs		dlub 				1.8.x
+-->
+<!--
+  Library:           OASIS Universal Business Language (UBL) 2.1
+                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Directory:         xsd
+  Module:            UBL-InventoryReport-2.1.xsd
+  Generated on:      20100830-2010z
+-->
+<xsd:schema 
+xmlns:ext="http://schemas.rfsholding.com/rid/InventoryReportExtensionComponents/v1.0"
+ xmlns:qdt="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0"
+  xmlns:udt="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0"
+     xmlns:cac="http://schemas.rfsholding.com/rid/InventoryReportAggregateComponents/v1.0" 
+    xmlns:cbc="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" 
+    xmlns:ccts="urn:un:unece:uncefact:documentation:2" 
+     xmlns="http://schemas.rfsholding.com/rid/InventoryReport/v1.0"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.rfsholding.com/rid/InventoryReport/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!-- ===== Imports ===== -->
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" schemaLocation="../common/Rid-UnqualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" schemaLocation="../common/Rid-QualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" schemaLocation="../common/Rid-CommonBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/InventoryReportAggregateComponents/v1.0" schemaLocation="Rid-InventoryReportAggregateComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/InventoryReportExtensionComponents/v1.0" schemaLocation="Rid-InventoryReportExtensionComponents-v1.0.xsd"/>
+	<!-- ===== Element Declaration ===== -->
+	<xsd:element name="InventoryReport" type="InventoryReportType">
+		<xsd:annotation>
+			<xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ===== Type Definition ===== -->
+	<!-- ===== Aggregate Business Information Entity Type Definiition ===== -->
+	<xsd:complexType name="InventoryReportType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Inventory Report. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Report about the quantities of each item which are or will be on stock.</ccts:Definition>
+					<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+					<ccts:AlternativeBusinessTerms>Storage status report.</ccts:AlternativeBusinessTerms>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>2.0.5</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>NES</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. Profile Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>BasicProcurementProcess</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>An identifier for the Inventory Report assigned by the Issuer.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:AlternativeBusinessTerms>Document Number, Inventory Report Number</ccts:AlternativeBusinessTerms>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. Issue Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>The date on which the Inventory Report was issued.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueTime" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. Issue Time. Time</ccts:DictionaryEntryName>
+							<ccts:Definition>The time on which the Inventory Report was issued.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
+							<ccts:DataType>Time. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:RetailerCustomerParty" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. Retailer_ Customer Party. Customer Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to the Retailer. He is the sender.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Retailer</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Customer Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Customer Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:InventoryReportingParty" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. InventoryReporting_ Party. Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to the Party that will really use the Inventory report (normally the branch for which the stock is reported). He is the receiver.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>InventoryReporting</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:InventoryReportLine" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report. Inventory Report Line</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to one or more Inventory Report Lines.</ccts:Definition>
+							<ccts:Cardinality>1..n</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report</ccts:ObjectClass>
+							<ccts:PropertyTerm>Inventory Report Line</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Inventory Report Line</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
+<!-- ===== Copyright Notice ===== -->
+<!--
+  OASIS takes no position regarding the validity or scope of any 
+  intellectual property or other rights that might be claimed to pertain 
+  to the implementation or use of the technology described in this 
+  document or the extent to which any license under such rights 
+  might or might not be available; neither does it represent that it has 
+  made any effort to identify any such rights. Information on OASIS's 
+  procedures with respect to rights in OASIS specifications can be 
+  found at the OASIS website. Copies of claims of rights made 
+  available for publication and any assurances of licenses to be made 
+  available, or the result of an attempt made to obtain a general 
+  license or permission for the use of such proprietary rights by 
+  implementors or users of this specification, can be obtained from 
+  the OASIS Executive Director.
+
+  OASIS invites any interested party to bring to its attention any 
+  copyrights, patents or patent applications, or other proprietary 
+  rights which may cover technology that may be required to 
+  implement this specification. Please address the information to the 
+  OASIS Executive Director.
+  
+  Copyright (C) OASIS Open 2001-2010. All Rights Reserved.
+
+  This document and translations of it may be copied and furnished to 
+  others, and derivative works that comment on or otherwise explain 
+  it or assist in its implementation may be prepared, copied, 
+  published and distributed, in whole or in part, without restriction of 
+  any kind, provided that the above copyright notice and this 
+  paragraph are included on all such copies and derivative works. 
+  However, this document itself may not be modified in any way, 
+  such as by removing the copyright notice or references to OASIS, 
+  except as needed for the purpose of developing OASIS 
+  specifications, in which case the procedures for copyrights defined 
+  in the OASIS Intellectual Property Rights document must be 
+  followed, or as required to translate it into languages other than 
+  English. 
+
+  The limited permissions granted above are perpetual and will not be 
+  revoked by OASIS or its successors or assigns. 
+
+  This document and the information contained herein is provided on 
+  an "AS IS" basis and OASIS DISCLAIMS ALL WARRANTIES, 
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY 
+  WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
+  WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+  PARTICULAR PURPOSE.    
+-->

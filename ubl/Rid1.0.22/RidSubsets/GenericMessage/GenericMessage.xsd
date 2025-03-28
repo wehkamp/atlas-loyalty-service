@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Revision info: $Id: GenericMessage.xsd 785 2012-09-24 09:14:23Z dlub $-->
+<!--
+ change history
+    date 					change  														    requestor			author		sheet version
+    14-09-2012	    UTF-16 ==>UTF8 (standard for ubl) 							s.nefs			d.lub			n.a 
+	20-09-2012		removed max length from elements							mantis 6902      d.lub			1.2
+-->
+<xs:schema xmlns="http://schemas.rfsholding.com/rid/GenericMessage/v1.0" xmlns:cmn="http:/schemas.rfsholding.com/rid/PS_HeaderProperties/v1.0" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.rfsholding.com/rid/GenericMessage/v1.0">
+	<xs:annotation>
+		<xs:appinfo>
+			<b:schemaInfo is_envelope="no" xmlns:b="http://schemas.microsoft.com/BizTalk/2003"/>
+			<b:imports>
+				<b:namespace prefix="cmn" uri="http:/schemas.rfsholding.com/rid/PS_HeaderProperties/v1.0" location=".\PS_HeaderProperties.xsd"/>
+			</b:imports>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:element name="GenericMessage">
+		<xs:annotation>
+			<xs:appinfo>
+				<b:properties>
+					<b:property name="cmn:AdministrationID" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='AdministrationID' and namespace-uri()='']"/>
+					<b:property name="cmn:SourceSystemCode" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='SourceSystemCode' and namespace-uri()='']"/>
+					<b:property name="cmn:BusinessTransactionID" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='BusinessTransactionID' and namespace-uri()='']"/>
+					<b:property name="cmn:MessageType" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='MessageType' and namespace-uri()='']"/>
+					<b:property name="cmn:MessageDateTime" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='MessageDateTime' and namespace-uri()='']"/>
+					<b:property name="cmn:BusinessEntityID" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='BusinessEntityID' and namespace-uri()='']"/>
+				</b:properties>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:annotation>
+						<xs:appinfo>
+							<b:properties>
+								<b:property name="cmn:Administration" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='Administration' and namespace-uri()='']"/>
+								<b:property name="cmn:SourceSystem" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='SourceSystem' and namespace-uri()='']"/>
+								<b:property name="cmn:SourceMessageType" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='SourceMessageType' and namespace-uri()='']"/>
+								<b:property name="cmn:SourceMessageID" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='SourceMessageID' and namespace-uri()='']"/>
+								<b:property name="cmn:MessageDateTime" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='MessageDateTime' and namespace-uri()='']"/>
+								<b:property name="cmn:BusinessEntityID" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='BusinessEntityID' and namespace-uri()='']"/>
+							</b:properties>
+						</xs:appinfo>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AdministrationID">
+								<xs:annotation>
+									<xs:appinfo>
+										<b:fieldInfo notes="This is the 'Data area Id' in AX"/>
+									</xs:appinfo>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SourceSystemCode">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BusinessTransactionID">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BusinessEntityID" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="MessageType">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"/>										
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="MessageDateTime" type="xs:dateTime">
+								<xs:annotation>
+									<xs:appinfo>
+										<b:fieldInfo notes="UTC"/>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="RoutingInformation" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Property" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Key" type="xs:string"/>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Body">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:any processContents="skip"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

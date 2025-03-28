@@ -1,0 +1,1 @@
+The Rid schema profile contains xsd schemas to support the RSF ESB integration environment.

@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gm:GenericMessage xmlns:gm="http://schemas.rfsholding.com/rid/GenericMessage/v1.0" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:oc="urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2">
+   <Header>
+      <AdministrationID>012</AdministrationID>
+      <SourceSystemCode>RFS.TRC</SourceSystemCode>
+      <BusinessTransactionID>256aa847-731c-4a87-9457-f1025ee7ec84</BusinessTransactionID>
+      <BusinessEntityID>72906559</BusinessEntityID>
+      <MessageType>FulfilmentOrder</MessageType>
+      <MessageDateTime>2022-06-14T09:52:49.719Z</MessageDateTime>
+      <RoutingInformation>
+         <Property>
+            <Key>UBLVersionID</Key>
+            <Value>2.1</Value>
+         </Property>
+         <Property>
+            <Key>CustomizationID</Key>
+            <Value>urn:schemas.rfshollandholding.com:transaction:TR52:FulfilmentOrder:2.0</Value>
+         </Property>
+         <Property>
+            <Key>ProfileID</Key>
+            <Value>rid</Value>
+         </Property>
+         <Property>
+            <Key>DocumentIdentificationStandard</Key>
+            <Value>urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2</Value>
+         </Property>
+         <Property>
+            <Key>SenderParty</Key>
+            <Value>1001</Value>
+         </Property>
+         <Property>
+            <Key>SenderPartySchemeID</Key>
+            <Value>RFS.DAX</Value>
+         </Property>
+         <Property>
+            <Key>ReceiverParty</Key>
+            <Value>012</Value>
+         </Property>
+         <Property>
+            <Key>ReceiverPartySchemeID</Key>
+            <Value>RFS.DAX</Value>
+         </Property>
+         <Property>
+            <Key>BusinessEntityUUID</Key>
+            <Value>256aa847-731c-4a87-9457-f1025ee7ec84</Value>
+         </Property>
+      </RoutingInformation>
+   </Header>
+   <Body>
+      <oc:OrderChange>
+         <cbc:UBLVersionID schemeID="UBL">2.1</cbc:UBLVersionID>
+         <cbc:CustomizationID schemeID="RFS">urn:schemas.rfshollandholding.com:transaction:TR52:FulfilmentOrder:2.0</cbc:CustomizationID>
+         <cbc:ProfileID schemeID="RFS">rid</cbc:ProfileID>
+         <cbc:ID schemeID="RFS.TRC">DOC1729065590</cbc:ID>
+         <cbc:UUID>256aa847-731c-4a87-9457-f1025ee7ec84</cbc:UUID>
+         <cbc:IssueDate>2022-06-14</cbc:IssueDate>
+         <cbc:IssueTime>09:52:49.679Z</cbc:IssueTime>
+         <cbc:SequenceNumberID schemeID="RFS.TRC">0</cbc:SequenceNumberID>
+         <cbc:LineCountNumeric>1.00</cbc:LineCountNumeric>
+         <cac:OrderReference>
+            <cbc:ID schemeID="RFS.TRC">72906559</cbc:ID>
+            <cbc:OrderTypeCode>FulfilmentOrderCollect</cbc:OrderTypeCode>
+         </cac:OrderReference>
+         <cac:BuyerCustomerParty>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeID="RFS.DAX">1001</cbc:ID>
+               </cac:PartyIdentification>
+               <cac:PartyName>
+                  <cbc:Name>wehkamp</cbc:Name>
+               </cac:PartyName>
+               <cac:PartyLegalEntity>
+                  <cbc:RegistrationName>Wehkamp B.V.</cbc:RegistrationName>
+                  <cbc:CompanyID schemeID="NL:KVK">27109571</cbc:CompanyID>
+                  <cac:RegistrationAddress>
+                     <cbc:CityName>Zwolle</cbc:CityName>
+                  </cac:RegistrationAddress>
+                  <cac:CorporateRegistrationScheme>
+                     <cbc:Name>KvK</cbc:Name>
+                  </cac:CorporateRegistrationScheme>
+               </cac:PartyLegalEntity>
+            </cac:Party>
+         </cac:BuyerCustomerParty>
+         <cac:SellerSupplierParty>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeID="RFS.DAX">012</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:SellerSupplierParty>
+         <cac:OriginatorCustomerParty>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeID="RFS.TRC">62796925</cbc:ID>
+               </cac:PartyIdentification>
+               <cac:PartyName>
+                  <cbc:Name>S.G.M. Bongers-Teunissen</cbc:Name>
+               </cac:PartyName>
+            </cac:Party>
+         </cac:OriginatorCustomerParty>
+         <cac:OrderLine>
+            <cac:LineItem>
+               <cbc:ID schemeID="RFS.TRC">227112411</cbc:ID>
+               <cbc:Quantity>1.00</cbc:Quantity>
+               <cbc:PartialDeliveryIndicator>true</cbc:PartialDeliveryIndicator>
+               <cac:Delivery>
+                  <cbc:ID schemeID="RFS.TRC">D227097200</cbc:ID>
+                  <cac:CarrierParty>
+                     <cac:PartyIdentification>
+                        <cbc:ID schemeID="Label">DHL</cbc:ID>
+                     </cac:PartyIdentification>
+                     <cac:PartyIdentification>
+                        <cbc:ID schemeID="RFS.DAX">3168</cbc:ID>
+                     </cac:PartyIdentification>
+                  </cac:CarrierParty>
+                  <cac:DeliveryParty>
+                     <cac:PartyIdentification>
+                        <cbc:ID schemeID="RFS.DAX">ZWO</cbc:ID>
+                     </cac:PartyIdentification>
+                  </cac:DeliveryParty>
+                  <cac:Despatch>
+                     <cac:DespatchParty>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeID="RFS.TRC">19473265</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:Language>
+                           <cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+                        </cac:Language>
+                        <cac:PostalAddress>
+                           <cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+                           <cbc:StreetName>Wielewaal</cbc:StreetName>
+                           <cbc:BuildingNumber>6</cbc:BuildingNumber>
+                           <cbc:CityName>Ulft</cbc:CityName>
+                           <cbc:PostalZone>7071KG</cbc:PostalZone>
+                           <cac:AddressLine>
+                              <cbc:Line />
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line />
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line>S.G.M. Bongers-Teunissen</cbc:Line>
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line>Wielewaal 6</cbc:Line>
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line>7071 KG Ulft</cbc:Line>
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line />
+                           </cac:AddressLine>
+                           <cac:Country>
+                              <cbc:IdentificationCode>NL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:ElectronicMail>rjwbongers@planet.nl</cbc:ElectronicMail>
+                           <cac:OtherCommunication>
+                              <cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+                              <cbc:Value>rjwbongers@planet.nl</cbc:Value>
+                           </cac:OtherCommunication>
+                        </cac:Contact>
+                        <cac:Person>
+                           <cbc:FirstName>S.G.M.</cbc:FirstName>
+                           <cbc:FamilyName>Bongers-Teunissen</cbc:FamilyName>
+                        </cac:Person>
+                     </cac:DespatchParty>
+                     <cac:NotifyParty>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeID="RFS.TRC">19473265</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:Language>
+                           <cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+                        </cac:Language>
+                        <cac:PostalAddress>
+                           <cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+                           <cbc:StreetName>Wielewaal</cbc:StreetName>
+                           <cbc:BuildingNumber>6</cbc:BuildingNumber>
+                           <cbc:CityName>Ulft</cbc:CityName>
+                           <cbc:PostalZone>7071KG</cbc:PostalZone>
+                           <cac:AddressLine>
+                              <cbc:Line />
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line />
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line>S.G.M. Bongers-Teunissen</cbc:Line>
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line>Wielewaal 6</cbc:Line>
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line>7071 KG Ulft</cbc:Line>
+                           </cac:AddressLine>
+                           <cac:AddressLine>
+                              <cbc:Line />
+                           </cac:AddressLine>
+                           <cac:Country>
+                              <cbc:IdentificationCode>NL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:ElectronicMail>rjwbongers@planet.nl</cbc:ElectronicMail>
+                           <cac:OtherCommunication>
+                              <cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+                              <cbc:Value>rjwbongers@planet.nl</cbc:Value>
+                           </cac:OtherCommunication>
+                        </cac:Contact>
+                        <cac:Person>
+                           <cbc:FirstName>S.G.M.</cbc:FirstName>
+                           <cbc:FamilyName>Bongers-Teunissen</cbc:FamilyName>
+                        </cac:Person>
+                     </cac:NotifyParty>
+                     <cac:RequestedDespatchPeriod>
+                        <cbc:StartDate>2022-06-15</cbc:StartDate>
+                        <cbc:StartTime>09:00:00.000Z</cbc:StartTime>
+                        <cbc:EndDate>2022-06-15</cbc:EndDate>
+                        <cbc:EndTime>13:00:00.000Z</cbc:EndTime>
+                        <cbc:Description>15-06-2022</cbc:Description>
+                     </cac:RequestedDespatchPeriod>
+                  </cac:Despatch>
+                  <cac:Shipment>
+                     <cbc:ID schemeID="RFS.TRC">S227097200</cbc:ID>
+                     <cbc:ShippingPriorityLevelCode>49</cbc:ShippingPriorityLevelCode>
+                     <cac:TransportHandlingUnit>
+                        <cac:Package>
+                           <cbc:ID schemeID="RFS.KIS.ZWO">JUN491599949120168396180</cbc:ID>
+                           <cbc:PackagingTypeCode>B1</cbc:PackagingTypeCode>
+                           <cac:MeasurementDimension>
+                              <cbc:AttributeID schemeID="RFS.DAX">GrossDepth</cbc:AttributeID>
+                              <cbc:Measure unitCode="MMT">650.00</cbc:Measure>
+                           </cac:MeasurementDimension>
+                           <cac:MeasurementDimension>
+                              <cbc:AttributeID schemeID="RFS.DAX">GrossWidth</cbc:AttributeID>
+                              <cbc:Measure unitCode="MMT">400.00</cbc:Measure>
+                           </cac:MeasurementDimension>
+                           <cac:MeasurementDimension>
+                              <cbc:AttributeID schemeID="RFS.DAX">GrossHeight</cbc:AttributeID>
+                              <cbc:Measure unitCode="MMT">200.00</cbc:Measure>
+                           </cac:MeasurementDimension>
+                           <cac:MeasurementDimension>
+                              <cbc:AttributeID schemeID="RFS.DAX">GrossWeight</cbc:AttributeID>
+                              <cbc:Measure unitCode="GRM">280.00</cbc:Measure>
+                           </cac:MeasurementDimension>
+                           <cac:MeasurementDimension>
+                              <cbc:AttributeID schemeID="RFS.DAX">UnitVolume</cbc:AttributeID>
+                              <cbc:Measure unitCode="LTR">52.00</cbc:Measure>
+                           </cac:MeasurementDimension>
+                        </cac:Package>
+                     </cac:TransportHandlingUnit>
+                  </cac:Shipment>
+               </cac:Delivery>
+               <cac:Item>
+                  <cbc:Description>BLOUSE - CLOSED NECK</cbc:Description>
+                  <cbc:Description>PIECES Geel EAN 5715308165744</cbc:Description>
+                  <cac:BuyersItemIdentification>
+                     <cbc:ID schemeID="RFS.DAX">16928171</cbc:ID>
+                     <cbc:ExtendedID schemeID="RFS.DAX">040</cbc:ExtendedID>
+                  </cac:BuyersItemIdentification>
+                  <cac:AdditionalItemProperty>
+                     <cbc:Name>PresentationSize</cbc:Name>
+                     <cbc:Value>L</cbc:Value>
+                  </cac:AdditionalItemProperty>
+                  <cac:AdditionalItemProperty>
+                     <cbc:Name>PresentationArticleNumber</cbc:Name>
+                     <cbc:Value>16-928-171</cbc:Value>
+                  </cac:AdditionalItemProperty>
+                  <cac:AdditionalItemProperty>
+                     <cbc:Name>PresentationColor</cbc:Name>
+                     <cbc:Value>Geel</cbc:Value>
+                  </cac:AdditionalItemProperty>
+                  <cac:AdditionalItemProperty>
+                     <cbc:Name>Brand</cbc:Name>
+                     <cbc:Value>PIECES</cbc:Value>
+                  </cac:AdditionalItemProperty>
+                  <cac:AdditionalItemProperty>
+                     <cbc:Name>PresentationShortDescription</cbc:Name>
+                     <cbc:Value>PIECES ribgebreide crop top PCTEGAN met ruches ...</cbc:Value>
+                  </cac:AdditionalItemProperty>
+               </cac:Item>
+               <cac:LineReference>
+                  <cbc:LineID schemeID="RFS.TRC">4616782809</cbc:LineID>
+                  <cbc:UUID schemeID="TR">004616782809</cbc:UUID>
+                  <cac:DocumentReference>
+                     <cbc:ID schemeID="RFS.TRC">237757072</cbc:ID>
+                     <cbc:DocumentTypeCode>SalesOrder</cbc:DocumentTypeCode>
+                  </cac:DocumentReference>
+               </cac:LineReference>
+            </cac:LineItem>
+         </cac:OrderLine>
+      </oc:OrderChange>
+   </Body>
+</gm:GenericMessage>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gm:GenericMessage xmlns:gm="http://schemas.rfsholding.com/rid/GenericMessage/v1.0"
+                   xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                   xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                   xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                   xmlns:ar="urn:oasis:names:specification:ubl:schema:xsd:ApplicationResponse-2">
+	<Header>
+		<AdministrationID>012</AdministrationID>
+		<SourceSystemCode>RFS.TRC</SourceSystemCode>
+		<BusinessTransactionID>262909ed-0dff-460a-b7ad-18312d7dc718</BusinessTransactionID>
+		<BusinessEntityID>00000000000338154846</BusinessEntityID>
+		<MessageType>ApplicationResponse</MessageType>
+		<MessageDateTime>2021-11-24T11:05:34.703Z</MessageDateTime>
+		<RoutingInformation>
+			<Property>
+				<Key>UBLVersionID</Key>
+				<Value>2.1</Value>
+			</Property>
+			<Property>
+				<Key>CustomizationID</Key>
+				<Value>2.0</Value>
+			</Property>
+			<Property>
+				<Key>ProfileID</Key>
+				<Value>rid</Value>
+			</Property>
+		</RoutingInformation>
+	</Header>
+	<Body>
+		<ar:ApplicationResponse>
+			<cbc:UBLVersionID schemeID="UBL">2.1</cbc:UBLVersionID>
+			<cbc:CustomizationID schemeID="RFS">2.0</cbc:CustomizationID>
+			<cbc:ProfileID schemeID="RFS">rid</cbc:ProfileID>
+			<cbc:ID schemeID="RFS.TRC">AR-00000000000338154846</cbc:ID>
+			<cbc:IssueDate>2021-11-24</cbc:IssueDate>
+			<cbc:IssueTime>11:05:34.703Z</cbc:IssueTime>
+			<cac:SenderParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeID="RFS">RFS.TRC</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:SenderParty>
+			<cac:ReceiverParty>
+				<cac:PartyIdentification>
+					<cbc:ID schemeID="RFS">RFS</cbc:ID>
+				</cac:PartyIdentification>
+			</cac:ReceiverParty>
+			<cac:DocumentResponse>
+				<cac:Response>
+					<cbc:ResponseCode>OK</cbc:ResponseCode>
+					<cac:Status>
+						<cbc:StatusReasonCode>1</cbc:StatusReasonCode>
+						<cbc:StatusReason>all ok</cbc:StatusReason>
+					</cac:Status>
+				</cac:Response>
+				<cac:DocumentReference>
+					<cbc:ID schemeID="RFS.KIS.ZWO">00000000000338154846</cbc:ID>
+					<cbc:DocumentTypeCode>DespatchAdvice</cbc:DocumentTypeCode>
+				</cac:DocumentReference>
+			</cac:DocumentResponse>
+		</ar:ApplicationResponse>
+	</Body>
+</gm:GenericMessage>

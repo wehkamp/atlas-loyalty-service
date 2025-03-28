@@ -1,0 +1,81 @@
+UBL valideren mbv Altova XML Spy
+
+Onder de directory "Program Files/Altova" is een directory aanwezig met de naam "Common..../Schemas" 
+waarin een aantal standaards zijn opgenomen.
+UBL is daar een van. UBL is door Altova bijgewerkt tot 2.0. Wij werken inmiddels met versie 2.1 prd 3. 
+
+
+UBL2.1prd3 toevoegen aan altova xmlspy
+
+Eea is redelijk eenvoudig bij te werken: 
+
+1     	De nieuwe definitie-bestanden (xsd's) uit de standaard "maindoc" en "common" toevoeg aan de 
+	corresponderende directories onder /files"
+	  
+2	In het bestand catalog.xml de juiste verwijzingen aanbrengen.
+
+
+Rid valideren mbv Altova XML Spy
+
+Ook onze eigen standaard (Rid) is op overeenkomstige wijze onder Altova XMLSpy gehangen als 'standaard' door de 
+volledige oplevering van de xsd's (RidSubsets uit subversion) te plaatsen onder "Program Files/Altova/Common..../Schemas"
+Aan deze oplevering is inmiddels het bestand catalog.xml toegevoegd.
+
+
+Door berichten te valideren tegen de specificaties van Rid, of tegen de standaard UBL, kunnen we vaststellen in
+welke mate de berichten aan de Rid specificaties of de standaard UBL specificaties voldoen. 
+
+
+
+Rid-documenten valideren tegen Rid specificaties
+
+1 open bericht in Altova xmlspy
+2 koppel dit aan de juiste xsd onder "Program Files/Altova/Common..../Schemas/RidSubsets"
+3 Valideer het bericht.
+
+
+Rid-documenten valideren tegen UBL mbv Altova
+Omdat Rid een subset is, met extensies op de standaard ubl, moet een aantal wijzigingen in het bericht worden aangebracht 
+voordat de validatie succesvol kan verlopen.
+
+1 koppel het bericht (aan de standaard UBL2.1-prd3 xsd waarvan dit bericht is afgeleid:
+	---------RID------------	--------UBL---------
+	ApplicationResponse		ApplicationResponse
+	Catalogue			Catalogue
+	DespatchAdvice			DespatchAdvice
+	FulfilmentOrder			DespatchAdvice		
+	InventoryReport			InventoryReport
+	ProductActivity			ProductActivity
+	PurchaseOrder 			OrderChange
+	PurchaseOrderResponse		OrderResponse
+	ReceiptAdvice			ReceiptAdvice
+	SalesOrder 			OrderChange
+	SelfBilledCreditNote		SelfBilledCreditNote
+	SelfBilledInvoice		SelfBilledInvoice
+	SelfBilledPurchaseOrder		OrderChange
+	SelfBilledSalesOrder		OrderChange
+	Supplier			niet in UBL aanwezig
+  	
+2 vervang de naam van het bericht door de oorspronkelijke UBL naam ( bijvoorbeeld SalesOrder --> OrderChange )
+  denk hier ook aan de eindtag.
+  	<SalesOrder					--> <OrderChange
+  	.
+  	.
+    	</SalesOrder>					--> </OrderChange>
+  	
+  	
+3 vervang de namespaces voor de prefixes cbc, cac, ext door de oorspronkelijke
+	xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" 
+	xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+	xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+
+4 vervang de Rid-schemalocation door de UBL-schemalocation
+	rid:    xsi:schemaLocation="http://schemas.rfsholding.com/rid/SalesOrder/v1.0 
+				../../Program%20Files/Altova/Common2012/Schemas/RidSubsets/SalesOrder/Rid-SalesOrder-v1.0.xsd
+	ubl:	xsi:schemaLocation="urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2 
+				UBL-OrderChange-2.1.xsd"
+	
+5 de namespaces voor de prefixes voor de extensies (dit zijn de overige) kunnen blijven staan - de extensies worden 
+  bij validatie tegen standaard ubl niet meegenomen.
+
+6 valideer het bericht

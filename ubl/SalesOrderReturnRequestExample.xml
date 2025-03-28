@@ -1,0 +1,16 @@
+<ns5:SalesOrderReturnRequestBody xmlns:ns6="urn:rfs:schema:xsd:SalesOrderReturnResponseBody-1" xmlns:ns5="urn:rfs:schema:xsd:SalesOrderReturnRequestBody-1" xmlns:ns8="urn:rfs:schema:xsd:OrderLineResponse-1" xmlns:ns7="urn:rfs:schema:xsd:ExtendedCommonAggregateComponents-2" xmlns:ns9="urn:rfs:schema:xsd:AlternativeOrderLinesResponse-1" xmlns:ns2="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:ns4="urn:rfs:schema:xsd:ExtendedCommonBasicComponents-2" xmlns:ns3="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2">
+    <ns2:ID schemeID="RFS.KIS">14009682-9129-4559-86a4-26c8b3573cb6</ns2:ID>
+    <ns2:UUID schemeID="OMS.KLE">000000000001</ns2:UUID>
+    <ns4:ItemAssessmentResultCode>OK</ns4:ItemAssessmentResultCode>
+    <ns2:Quantity unitCode="EA">1.00</ns2:Quantity>
+    <ns3:DeliveryCustomerParty>
+        <ns3:Party>
+            <ns3:PartyIdentification>
+                <ns2:ID schemeID="RFS.DAX">ZWO</ns2:ID>
+            </ns3:PartyIdentification>
+            <ns3:Person>
+                <ns2:ID schemeID="RFS.KIS">Marcel Overeem</ns2:ID>
+            </ns3:Person>
+        </ns3:Party>
+    </ns3:DeliveryCustomerParty>
+</ns5:SalesOrderReturnRequestBody>

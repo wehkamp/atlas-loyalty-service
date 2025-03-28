@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Revision info: $Id: Rid-ExtendedSalesOrder-v1.0.xsd 806 2012-10-18 11:19:09Z dlub $-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.rfsholding.com/rid/ExtendedSalesOrder/v1.0" 
+	xmlns:qdt="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" xmlns:udt="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" 
+xmlns:cbc="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" xmlns:ecac="http://schemas.rfsholding.com/rid/ExtendedSalesOrderAggregateComponents/v1.0"  xmlns:ecbc="http://schemas.rfsholding.com/rid/ExtendedSalesOrderBasicComponents/v1.0" xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="http://schemas.rfsholding.com/rid/ExtendedSalesOrder/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" schemaLocation="../common/Rid-UnqualifiedDataTypes-v1.0.xsd"/>
+    <xsd:import namespace="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" schemaLocation="../common/Rid-QualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" schemaLocation="../common/Rid-CommonBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedSalesOrderAggregateComponents/v1.0" schemaLocation="Rid-ExtendedSalesOrderAggregateComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedSalesOrderBasicComponents/v1.0" schemaLocation="Rid-ExtendedSalesOrderBasicComponents-v1.0.xsd"/>
+	<xsd:element name="ExtendedSalesOrder" type="ExtendedSalesOrderType">
+		<xsd:annotation>
+			<xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ExtendedSalesOrderType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>SalesOrder Details</ccts:DictionaryEntryName>
+					<ccts:Definition>A document stating the date/time the orderline was changed.</ccts:Definition>
+					<ccts:ObjectClass>Purchase Order</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ecac:OrderLine" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

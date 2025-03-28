@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 (http://www.altova.com) by R. Overkamp (Wehkamp BV) -->
+<!--Revision info: $Id: Rid-InventoryReportAggregateComponents-v1.0.xsd 502 2012-03-05 15:21:28Z dlub $-->
+<!--
+  Library:           OASIS Universal Business Language (UBL) 2.1
+                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Directory:         xsd
+  Module:            UBL-CommonAggregateComponents-2.1.xsd
+  Generated on:      20100830-2010z
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.rfsholding.com/rid/InventoryReportAggregateComponents/v1.0" xmlns:cac="http://schemas.rfsholding.com/rid/InventoryReportAggregateComponents/v1.0" xmlns:cbc="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="http://schemas.rfsholding.com/rid/InventoryReportAggregateComponents/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!-- ===== Import ===== -->
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" schemaLocation="../common/Rid-CommonBasicComponents-v1.0.xsd"/>
+	<!-- ===== Element Declarations ===== -->
+	<xsd:element name="InventoryReportLine" type="InventoryReportLineType"/>
+	<xsd:element name="InventoryReportingParty" type="PartyType"/>
+	<xsd:element name="BuyersItemIdentification" type="ItemIdentificationType"/>
+	<xsd:element name="Item" type="ItemType"/>
+	<xsd:element name="Location" type="LocationType"/>
+	<xsd:element name="Party" type="PartyType"/>
+	<xsd:element name="PartyIdentification" type="PartyIdentificationType"/>
+	<xsd:element name="RetailerCustomerParty" type="CustomerPartyType"/>
+	<xsd:element name="SellersItemIdentification" type="ItemIdentificationType"/>
+	<xsd:element name="SubsidiaryLocation" type="LocationType"/>
+	<xsd:complexType name="CustomerPartyType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Customer Party. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information about the Customer Party.</ccts:Definition>
+					<ccts:ObjectClass>Customer Party</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="Party" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Customer Party. Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to Party.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Customer Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="InventoryReportLineType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Inventory Report Line. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information about an Inventory Report Line.</ccts:Definition>
+					<ccts:ObjectClass>Inventory Report Line</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report Line. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>An identifier for the Inventory Report Line.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:Quantity" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report Line. Quantity</ccts:DictionaryEntryName>
+							<ccts:Definition>The quantity that is currently on stock.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Quantity</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Quantity</ccts:RepresentationTerm>
+							<ccts:DataType>Quantity. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="Item" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Inventory Report Line. Item</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to an Item.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Inventory Report Line</ccts:ObjectClass>
+							<ccts:PropertyTerm>Item</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Item</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ItemType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Item. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information directly relating to an item.</ccts:Definition>
+					<ccts:ObjectClass>Item</ccts:ObjectClass>
+					<ccts:AlternativeBusinessTerms>article, product, goods item</ccts:AlternativeBusinessTerms>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="BuyersItemIdentification"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ItemIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Item Identification. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information about item identification.</ccts:Definition>
+					<ccts:ObjectClass>Item Identification</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item Identification. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>An identifier for an item.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Item Identification</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>CUST001   3333-44-123</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ExtendedID" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Item Identification. Extended_ Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>An extended identifier for the item that identifies the item with specific properties, e.g., Item 123 = Chair / Item 123 Ext 45 = brown chair.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Item Identification</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Extended</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="LocationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Location. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information about a location.</ccts:Definition>
+					<ccts:ObjectClass>Location</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Location. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The unique identifier for the location, e.g., the EAN Location Number, GLN.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Location</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>5790002221134</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:LocationTypeCode"/>
+			<xsd:element ref="cac:SubsidiaryLocation" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Location. Subsidiary_ Location. Location</ccts:DictionaryEntryName>
+							<ccts:Definition>Information about a subsidiary location.</ccts:Definition>
+							<ccts:Cardinality>0..n</ccts:Cardinality>
+							<ccts:ObjectClass>Location</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Subsidiary</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Location</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Location</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartyType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Party. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information about an organization, sub-organization, or individual fulfilling a role in a business process.</ccts:Definition>
+					<ccts:ObjectClass>Party</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="PartyIdentification" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party. Party Identification</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to Party Identification.</ccts:Definition>
+							<ccts:Cardinality>0..n</ccts:Cardinality>
+							<ccts:ObjectClass>Party</ccts:ObjectClass>
+							<ccts:PropertyTerm>Party Identification</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Party Identification</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="PartyIdentificationType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Party Identification. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>Information about a party s identification.</ccts:Definition>
+					<ccts:ObjectClass>Party Identification</ccts:ObjectClass>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Party Identification. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Identifies a party.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Party Identification</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

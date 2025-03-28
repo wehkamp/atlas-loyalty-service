@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Revision info: $Id: Rid-SelfBilledSalesOrder-v1.0.xsd 806 2012-10-18 11:19:09Z dlub $-->
+<!-- change history
+    date				change                                   					  		  	requestor     					author			sheet
+
+    23-01-2012	added this changehistory  	(xslx  1.5)						d.lub			                  	d.lub				1.5
+    24-01-2012	added original orderline reference to ext. 	(xlsx 1.6)	k.duvekot						d.lub				1.6
+    09-03-2012	spreadsheet version 1.6.1 - 1.7   1..7.0														d.lub				1.7.0
+    13-03-2012	renamed ..ExtentensionContentDataType file			d.lub / e.schuijt				d.lub				1.7.0
+    10-04-2012	removed cac:OriginatorCustomerParty						mantis 5512					d.lub				1.7.3	
+						added: OrderTypeCode to extension						mantis 5510
+    12-04-2012	removed:																mantis 5531					d.lub				1.8.0
+						- cbc:DocumentCurrencyCode
+						- cac:TaxTotal
+						- cac:AllowanceCharge (not used)
+						- cac:AnticipatedMonetaryTotal
+						- cac:OrderLine.cac:LineItem.cbc:TotalTaxAmount
+						- cac:OrderLine.cac:LineItem.cbc:Price
+						- ext- ecac:OrderLine.ecac:LineItem.ecac:Price
+						- ext- ecac:OrderLine.ecac:LineItem.ecac:QuantityPrice
+						- cac:OrderReferenceType.cbc:SalesOrderID
+	09-10-2012	  changed order of imports										s nefs/biztalk 				d.lub				1.8.x
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.rfsholding.com/rid/SelfBilledSalesOrder/v1.0" xmlns:ext="http://schemas.rfsholding.com/rid/SelfBilledSalesOrderExtensionComponents/v1.0" xmlns:qdt="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0"
+xmlns:udt="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" xmlns:cbc="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" 
+xmlns:cac="http://schemas.rfsholding.com/rid/SelfBilledSalesOrderAggregateComponents/v1.0" 
+xmlns:ecac="http://schemas.rfsholding.com/rid/ExtendedSelfBilledSalesOrderAggregateComponents/v1.0" xmlns:ecbc="http://schemas.rfsholding.com/rid/ExtendedSelfBilledSalesOrderBasicComponents/v1.0" 
+xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="http://schemas.rfsholding.com/rid/SelfBilledSalesOrder/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" schemaLocation="../common/Rid-UnqualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" schemaLocation="../common/Rid-QualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" schemaLocation="../common/Rid-CommonBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/SelfBilledSalesOrderAggregateComponents/v1.0" schemaLocation="Rid-SelfBilledSalesOrderAggregateComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedSelfBilledSalesOrderBasicComponents/v1.0" schemaLocation="Rid-ExtendedSelfBilledSalesOrderBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedSelfBilledSalesOrderAggregateComponents/v1.0" schemaLocation="Rid-ExtendedSelfBilledSalesOrderAggregateComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/SelfBilledSalesOrderExtensionComponents/v1.0" schemaLocation="Rid-SelfBilledSalesOrderExtensionComponents-v1.0.xsd"/>
+	
+	<xsd:element name="SelfBilledSalesOrder" type="SelfBilledSalesOrderType">
+		<xsd:annotation>
+			<xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="SelfBilledSalesOrderType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Order Change. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>The document used to specify changes to an existing Order.</ccts:Definition>
+					<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+					<ccts:AlternativeBusinessTerms>Purchase Order Change</ccts:AlternativeBusinessTerms>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ext:UBLExtensions" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:UBLVersionID" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>2.0.5</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:CustomizationID" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>NES</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ProfileID" minOccurs="0" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Profile Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Identifies a user-defined profile of the customization of UBL being used.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>BasicProcurementProcess</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>An identifier for the Order Change assigned by the Buyer.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Issue Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>The date assigned by the Buyer on which the Order was changed.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueTime">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Issue Time. Time</ccts:DictionaryEntryName>
+							<ccts:Definition>The time assigned by the Buyer at which the Order was changed.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
+							<ccts:DataType>Time. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:SequenceNumberID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Sequence_ Number. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The Order Change Sequence Number assigned by the Buyer to ensure the proper sequencing of changes.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Sequence</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Number</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:LineCountNumeric" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Line Count. Numeric</ccts:DictionaryEntryName>
+							<ccts:Definition>The number of lines in the document.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Line Count</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+							<ccts:DataType>Numeric. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:OrderReference" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Order Reference</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to Order Reference (the reference of the Order being changed).</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Order Reference</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Order Reference</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:BuyerCustomerParty" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Buyer_ Customer Party. Customer Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to the Buyer.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Buyer</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Customer Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Customer Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:SellerSupplierParty" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Seller_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to the Seller.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Seller</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Supplier Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Supplier Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:OrderLine" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component xmlns:ccts="urn:un:unece:uncefact:documentation:2">
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Order Change. Order Line</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to one or more (changed) Order Lines.</ccts:Definition>
+							<ccts:Cardinality>1..n</ccts:Cardinality>
+							<ccts:ObjectClass>Order Change</ccts:ObjectClass>
+							<ccts:PropertyTerm>Order Line</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Order Line</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

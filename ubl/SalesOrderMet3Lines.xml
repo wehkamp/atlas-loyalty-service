@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gm:GenericMessage xmlns:gm="http://schemas.rfsholding.com/rid/GenericMessage/v1.0"
+                   xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                   xmlns:ns4="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                   xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                   xmlns:oc="urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2">
+	<Header>
+		<AdministrationID>012</AdministrationID>
+		<SourceSystemCode>RFS.TRC</SourceSystemCode>
+		<BusinessTransactionID>554c6f17-9cea-4e82-b853-bd8649e9601d</BusinessTransactionID>
+		<BusinessEntityID>223960729</BusinessEntityID>
+		<MessageType>SalesOrder</MessageType>
+		<MessageDateTime>2021-11-24T09:01:18.111Z</MessageDateTime>
+		<RoutingInformation>
+			<Property>
+				<Key>UBLVersionID</Key>
+				<Value>2.1</Value>
+			</Property>
+			<Property>
+				<Key>ProfileID</Key>
+				<Value>rid</Value>
+			</Property>
+			<Property>
+				<Key>CustomizationID</Key>
+				<Value>urn:schemas.rfshollandholding.com:transaction:TR02:SalesOrder:3.0</Value>
+			</Property>
+			<Property>
+				<Key>DocumentIdentificationStandard</Key>
+				<Value>urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2</Value>
+			</Property>
+			<Property>
+				<Key>SenderParty</Key>
+				<Value>1001</Value>
+			</Property>
+			<Property>
+				<Key>SenderPartySchemeID</Key>
+				<Value>RFS.TRC</Value>
+			</Property>
+			<Property>
+				<Key>ReceiverParty</Key>
+				<Value>012</Value>
+			</Property>
+			<Property>
+				<Key>ReceiverPartySchemeID</Key>
+				<Value>RFS.DAX</Value>
+			</Property>
+		</RoutingInformation>
+	</Header>
+	<Body>
+		<oc:OrderChange>
+			<cbc:UBLVersionID schemeID="UBL">2.1</cbc:UBLVersionID>
+			<cbc:CustomizationID schemeID="RFS">urn:schemas.rfshollandholding.com:transaction:TR02:SalesOrder:3.0</cbc:CustomizationID>
+			<cbc:ProfileID schemeID="RFS">rid</cbc:ProfileID>
+			<cbc:ID schemeID="RFS.TRC">223960729</cbc:ID>
+			<cbc:UUID>add79929-5ea3-4a4f-bdd1-27529b6c2ee1</cbc:UUID>
+			<cbc:IssueDate>2021-11-24</cbc:IssueDate>
+			<cbc:IssueTime>09:01:18.111Z</cbc:IssueTime>
+			<cbc:SequenceNumberID schemeID="RFS.TRC">0</cbc:SequenceNumberID>
+			<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+			<cbc:LineCountNumeric>3.00</cbc:LineCountNumeric>
+			<cac:OrderReference>
+				<cbc:ID schemeID="RFS.TRC">223960729</cbc:ID>
+				<cbc:OrderTypeCode>SalesOrder</cbc:OrderTypeCode>
+			</cac:OrderReference>
+			<cac:BuyerCustomerParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.DAX">1001</cbc:ID>
+					</cac:PartyIdentification>
+					<cac:PartyName>
+						<cbc:Name>wehkamp</cbc:Name>
+					</cac:PartyName>
+					<cac:PartyLegalEntity>
+						<cbc:RegistrationName>Wehkamp B.V.</cbc:RegistrationName>
+						<cbc:CompanyID schemeID="NL:KVK">27109571</cbc:CompanyID>
+						<cac:RegistrationAddress>
+							<cbc:CityName>Zwolle</cbc:CityName>
+						</cac:RegistrationAddress>
+						<cac:CorporateRegistrationScheme>
+							<cbc:Name>KvK</cbc:Name>
+						</cac:CorporateRegistrationScheme>
+					</cac:PartyLegalEntity>
+				</cac:Party>
+			</cac:BuyerCustomerParty>
+			<cac:SellerSupplierParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.DAX">012</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:SellerSupplierParty>
+			<cac:OriginatorCustomerParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.TRC">51059660</cbc:ID>
+					</cac:PartyIdentification>
+					<cac:PartyName>
+						<cbc:Name>M. van de Pol</cbc:Name>
+					</cac:PartyName>
+				</cac:Party>
+			</cac:OriginatorCustomerParty>
+			<cac:DeliveryTerms>
+				<cbc:ID schemeID="incoterms2010">DDP</cbc:ID>
+			</cac:DeliveryTerms>
+			<cac:TaxTotal>
+				<cbc:TaxAmount currencyID="EUR">7.66</cbc:TaxAmount>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount currencyID="EUR">36.45</cbc:TaxableAmount>
+					<cbc:TaxAmount currencyID="EUR">7.66</cbc:TaxAmount>
+					<cbc:Percent>21.00</cbc:Percent>
+					<cac:TaxCategory>
+						<cbc:ID schemeID="RFS.DAX">V6</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID schemeID="RFS.DAX">VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			<cac:AnticipatedMonetaryTotal>
+				<cbc:TaxExclusiveAmount currencyID="EUR">36.45</cbc:TaxExclusiveAmount>
+				<cbc:PayableAmount currencyID="EUR">44.11</cbc:PayableAmount>
+			</cac:AnticipatedMonetaryTotal>
+			<cac:OrderLine>
+				<cac:LineItem>
+					<cbc:ID schemeID="RFS.TRC">4523722928</cbc:ID>
+					<cbc:UUID schemeID="TR">004523722928</cbc:UUID>
+					<cbc:LineStatusCode>Added</cbc:LineStatusCode>
+					<cbc:Quantity unitCode="EA">1.00</cbc:Quantity>
+					<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+					<cbc:BackOrderAllowedIndicator>true</cbc:BackOrderAllowedIndicator>
+					<cac:Delivery>
+						<cbc:ID schemeID="RFS.TRC">111784585</cbc:ID>
+						<cac:RequestedDeliveryPeriod>
+							<cbc:StartDate>2021-11-25</cbc:StartDate>
+							<cbc:StartTime>10:00:00.000Z</cbc:StartTime>
+							<cbc:EndDate>2021-11-25</cbc:EndDate>
+							<cbc:EndTime>14:00:00.000Z</cbc:EndTime>
+							<cbc:Description>25-11-2021</cbc:Description>
+						</cac:RequestedDeliveryPeriod>
+						<cac:CarrierParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.DAX">3168</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="Label">DHL</cbc:ID>
+							</cac:PartyIdentification>
+						</cac:CarrierParty>
+						<cac:DeliveryParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">24755625</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Lieshoutseweg</cbc:StreetName>
+								<cbc:BuildingNumber>18</cbc:BuildingNumber>
+								<cbc:CityName>Helmond</cbc:CityName>
+								<cbc:PostalZone>5708 CK</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. van de Pol</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Lieshoutseweg 18</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>5708 CK Helmond</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:ElectronicMail>martinevenhuizen@gmail.com</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>martinevenhuizen@gmail.com</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>van de Pol</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:DeliveryParty>
+						<cac:NotifyParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">24755625</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Lieshoutseweg</cbc:StreetName>
+								<cbc:BuildingNumber>18</cbc:BuildingNumber>
+								<cbc:CityName>Helmond</cbc:CityName>
+								<cbc:PostalZone>5708 CK</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. van de Pol</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Lieshoutseweg 18</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>5708 CK Helmond</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:ElectronicMail>martinevenhuizen@gmail.com</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>martinevenhuizen@gmail.com</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>van de Pol</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:NotifyParty>
+						<cac:Despatch>
+							<cbc:RequestedDespatchDate>2021-11-25</cbc:RequestedDespatchDate>
+							<cbc:RequestedDespatchTime>00:59:00.000Z</cbc:RequestedDespatchTime>
+							<cac:DespatchLocation>
+								<cbc:ID schemeID="RFS.DAX">ZWO</cbc:ID>
+								<cbc:LocationTypeCode>Site</cbc:LocationTypeCode>
+								<cac:SubsidiaryLocation>
+									<cbc:ID schemeID="RFS.DAX">ZWO_FRE</cbc:ID>
+									<cbc:LocationTypeCode>Warehouse</cbc:LocationTypeCode>
+								</cac:SubsidiaryLocation>
+							</cac:DespatchLocation>
+						</cac:Despatch>
+						<cac:Shipment>
+							<cbc:ID schemeID="RFS.TRC">4523722928</cbc:ID>
+							<cbc:ShippingPriorityLevelCode>49</cbc:ShippingPriorityLevelCode>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information>Wil je artikelen retour sturen?</cbc:Information>
+							<cbc:Information>- Sluit deze retourbon in bij je pakket.</cbc:Information>
+							<cbc:Information>- Zorg ervoor dat het artikel altijd in de originele verpakking zit.</cbc:Information>
+							<cbc:Information>- Geef het pakket af bij een DHL Service punt.</cbc:Information>
+							<cbc:Information>Meer over het terugsturen van je bestelling lees je op wehkamp.com-klantenservice-retourneren.</cbc:Information>
+						</cac:Shipment>
+					</cac:Delivery>
+					<cac:Price>
+						<cbc:PriceAmount currencyID="EUR">14.51</cbc:PriceAmount>
+						<cbc:BaseQuantity unitCode="EA">1.00</cbc:BaseQuantity>
+						<cac:AllowanceCharge>
+							<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+							<cbc:AllowanceChargeReasonCode>Discount</cbc:AllowanceChargeReasonCode>
+							<cbc:Amount currencyID="EUR">3.63</cbc:Amount>
+						</cac:AllowanceCharge>
+					</cac:Price>
+					<cac:Item>
+						<cbc:Description>ds short</cbc:Description>
+						<cbc:Description>Taupe EANnr: 8711665538983</cbc:Description>
+						<cac:BuyersItemIdentification>
+							<cbc:ID schemeID="RFS.DAX">16298043</cbc:ID>
+							<cbc:ExtendedID schemeID="RFS.DAX">040</cbc:ExtendedID>
+						</cac:BuyersItemIdentification>
+						<cac:SellersItemIdentification>
+							<cbc:ID>30178</cbc:ID>
+							<cbc:ExtendedID/>
+						</cac:SellersItemIdentification>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationSize</cbc:Name>
+							<cbc:Value>L</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationArticleNumber</cbc:Name>
+							<cbc:Value>16-298-043</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationColor</cbc:Name>
+							<cbc:Value>Taupe</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>Brand</cbc:Name>
+							<cbc:Value>ten Cate</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationShortDescription</cbc:Name>
+							<cbc:Value>TC Secrets naadloze short taupe</cbc:Value>
+						</cac:AdditionalItemProperty>
+					</cac:Item>
+					<cac:ItemPriceExtension>
+						<cbc:Amount currencyID="EUR">14.51</cbc:Amount>
+						<cac:TaxTotal>
+							<cbc:TaxAmount currencyID="EUR">3.05</cbc:TaxAmount>
+							<cac:TaxSubtotal>
+								<cbc:TaxableAmount currencyID="EUR">14.51</cbc:TaxableAmount>
+								<cbc:TaxAmount currencyID="EUR">3.05</cbc:TaxAmount>
+								<cbc:Percent>21.00</cbc:Percent>
+								<cac:TaxCategory>
+									<cbc:ID schemeID="RFS.DAX">V6</cbc:ID>
+									<cac:TaxScheme>
+										<cbc:ID schemeID="RFS.DAX">VAT</cbc:ID>
+									</cac:TaxScheme>
+								</cac:TaxCategory>
+							</cac:TaxSubtotal>
+						</cac:TaxTotal>
+					</cac:ItemPriceExtension>
+				</cac:LineItem>
+			</cac:OrderLine>
+			<cac:OrderLine>
+				<cac:LineItem>
+					<cbc:ID schemeID="RFS.TRC">4523722926</cbc:ID>
+					<cbc:UUID schemeID="TR">004523722926</cbc:UUID>
+					<cbc:LineStatusCode>Added</cbc:LineStatusCode>
+					<cbc:Quantity unitCode="EA">1.00</cbc:Quantity>
+					<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+					<cbc:BackOrderAllowedIndicator>true</cbc:BackOrderAllowedIndicator>
+					<cac:Delivery>
+						<cbc:ID schemeID="RFS.TRC">111784585</cbc:ID>
+						<cac:RequestedDeliveryPeriod>
+							<cbc:StartDate>2021-11-25</cbc:StartDate>
+							<cbc:StartTime>10:00:00.000Z</cbc:StartTime>
+							<cbc:EndDate>2021-11-25</cbc:EndDate>
+							<cbc:EndTime>14:00:00.000Z</cbc:EndTime>
+							<cbc:Description>25-11-2021</cbc:Description>
+						</cac:RequestedDeliveryPeriod>
+						<cac:CarrierParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.DAX">3168</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="Label">DHL</cbc:ID>
+							</cac:PartyIdentification>
+						</cac:CarrierParty>
+						<cac:DeliveryParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">24755625</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Lieshoutseweg</cbc:StreetName>
+								<cbc:BuildingNumber>18</cbc:BuildingNumber>
+								<cbc:CityName>Helmond</cbc:CityName>
+								<cbc:PostalZone>5708 CK</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. van de Pol</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Lieshoutseweg 18</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>5708 CK Helmond</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:ElectronicMail>martinevenhuizen@gmail.com</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>martinevenhuizen@gmail.com</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>van de Pol</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:DeliveryParty>
+						<cac:NotifyParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">24755625</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Lieshoutseweg</cbc:StreetName>
+								<cbc:BuildingNumber>18</cbc:BuildingNumber>
+								<cbc:CityName>Helmond</cbc:CityName>
+								<cbc:PostalZone>5708 CK</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. van de Pol</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Lieshoutseweg 18</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>5708 CK Helmond</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:ElectronicMail>martinevenhuizen@gmail.com</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>martinevenhuizen@gmail.com</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>van de Pol</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:NotifyParty>
+						<cac:Despatch>
+							<cbc:RequestedDespatchDate>2021-11-25</cbc:RequestedDespatchDate>
+							<cbc:RequestedDespatchTime>00:59:00.000Z</cbc:RequestedDespatchTime>
+							<cac:DespatchLocation>
+								<cbc:ID schemeID="RFS.DAX">ZWO</cbc:ID>
+								<cbc:LocationTypeCode>Site</cbc:LocationTypeCode>
+								<cac:SubsidiaryLocation>
+									<cbc:ID schemeID="RFS.DAX">ZWO_FRE</cbc:ID>
+									<cbc:LocationTypeCode>Warehouse</cbc:LocationTypeCode>
+								</cac:SubsidiaryLocation>
+							</cac:DespatchLocation>
+						</cac:Despatch>
+						<cac:Shipment>
+							<cbc:ID schemeID="RFS.TRC">4523722926</cbc:ID>
+							<cbc:ShippingPriorityLevelCode>49</cbc:ShippingPriorityLevelCode>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information>Wil je artikelen retour sturen?</cbc:Information>
+							<cbc:Information>- Sluit deze retourbon in bij je pakket.</cbc:Information>
+							<cbc:Information>- Zorg ervoor dat het artikel altijd in de originele verpakking zit.</cbc:Information>
+							<cbc:Information>- Geef het pakket af bij een DHL Service punt.</cbc:Information>
+							<cbc:Information>Meer over het terugsturen van je bestelling lees je op wehkamp.com-klantenservice-retourneren.</cbc:Information>
+						</cac:Shipment>
+					</cac:Delivery>
+					<cac:Price>
+						<cbc:PriceAmount currencyID="EUR">14.51</cbc:PriceAmount>
+						<cbc:BaseQuantity unitCode="EA">1.00</cbc:BaseQuantity>
+						<cac:AllowanceCharge>
+							<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+							<cbc:AllowanceChargeReasonCode>Discount</cbc:AllowanceChargeReasonCode>
+							<cbc:Amount currencyID="EUR">3.63</cbc:Amount>
+						</cac:AllowanceCharge>
+					</cac:Price>
+					<cac:Item>
+						<cbc:Description>ds short</cbc:Description>
+						<cbc:Description>Taupe EANnr: 8711665538983</cbc:Description>
+						<cac:BuyersItemIdentification>
+							<cbc:ID schemeID="RFS.DAX">16298043</cbc:ID>
+							<cbc:ExtendedID schemeID="RFS.DAX">040</cbc:ExtendedID>
+						</cac:BuyersItemIdentification>
+						<cac:SellersItemIdentification>
+							<cbc:ID>30178</cbc:ID>
+							<cbc:ExtendedID/>
+						</cac:SellersItemIdentification>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationSize</cbc:Name>
+							<cbc:Value>L</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationArticleNumber</cbc:Name>
+							<cbc:Value>16-298-043</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationColor</cbc:Name>
+							<cbc:Value>Taupe</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>Brand</cbc:Name>
+							<cbc:Value>ten Cate</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationShortDescription</cbc:Name>
+							<cbc:Value>TC Secrets naadloze short taupe</cbc:Value>
+						</cac:AdditionalItemProperty>
+					</cac:Item>
+					<cac:ItemPriceExtension>
+						<cbc:Amount currencyID="EUR">14.51</cbc:Amount>
+						<cac:TaxTotal>
+							<cbc:TaxAmount currencyID="EUR">3.05</cbc:TaxAmount>
+							<cac:TaxSubtotal>
+								<cbc:TaxableAmount currencyID="EUR">14.51</cbc:TaxableAmount>
+								<cbc:TaxAmount currencyID="EUR">3.05</cbc:TaxAmount>
+								<cbc:Percent>21.00</cbc:Percent>
+								<cac:TaxCategory>
+									<cbc:ID schemeID="RFS.DAX">V6</cbc:ID>
+									<cac:TaxScheme>
+										<cbc:ID schemeID="RFS.DAX">VAT</cbc:ID>
+									</cac:TaxScheme>
+								</cac:TaxCategory>
+							</cac:TaxSubtotal>
+						</cac:TaxTotal>
+					</cac:ItemPriceExtension>
+				</cac:LineItem>
+			</cac:OrderLine>
+			<cac:OrderLine>
+				<cac:LineItem>
+					<cbc:ID schemeID="RFS.TRC">4523722927</cbc:ID>
+					<cbc:UUID schemeID="TR">004523722927</cbc:UUID>
+					<cbc:LineStatusCode>Added</cbc:LineStatusCode>
+					<cbc:Quantity unitCode="EA">1.00</cbc:Quantity>
+					<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+					<cbc:BackOrderAllowedIndicator>true</cbc:BackOrderAllowedIndicator>
+					<cac:Delivery>
+						<cbc:ID schemeID="RFS.TRC">111784585</cbc:ID>
+						<cac:RequestedDeliveryPeriod>
+							<cbc:StartDate>2021-11-25</cbc:StartDate>
+							<cbc:StartTime>10:00:00.000Z</cbc:StartTime>
+							<cbc:EndDate>2021-11-25</cbc:EndDate>
+							<cbc:EndTime>14:00:00.000Z</cbc:EndTime>
+							<cbc:Description>25-11-2021</cbc:Description>
+						</cac:RequestedDeliveryPeriod>
+						<cac:CarrierParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.DAX">3168</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="Label">DHL</cbc:ID>
+							</cac:PartyIdentification>
+						</cac:CarrierParty>
+						<cac:DeliveryParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">24755625</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Lieshoutseweg</cbc:StreetName>
+								<cbc:BuildingNumber>18</cbc:BuildingNumber>
+								<cbc:CityName>Helmond</cbc:CityName>
+								<cbc:PostalZone>5708 CK</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. van de Pol</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Lieshoutseweg 18</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>5708 CK Helmond</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:ElectronicMail>martinevenhuizen@gmail.com</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>martinevenhuizen@gmail.com</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>van de Pol</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:DeliveryParty>
+						<cac:NotifyParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">24755625</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Lieshoutseweg</cbc:StreetName>
+								<cbc:BuildingNumber>18</cbc:BuildingNumber>
+								<cbc:CityName>Helmond</cbc:CityName>
+								<cbc:PostalZone>5708 CK</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. van de Pol</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Lieshoutseweg 18</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>5708 CK Helmond</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line/>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:ElectronicMail>martinevenhuizen@gmail.com</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>martinevenhuizen@gmail.com</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>van de Pol</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:NotifyParty>
+						<cac:Despatch>
+							<cbc:RequestedDespatchDate>2021-11-25</cbc:RequestedDespatchDate>
+							<cbc:RequestedDespatchTime>00:59:00.000Z</cbc:RequestedDespatchTime>
+							<cac:DespatchLocation>
+								<cbc:ID schemeID="RFS.DAX">ZWO</cbc:ID>
+								<cbc:LocationTypeCode>Site</cbc:LocationTypeCode>
+								<cac:SubsidiaryLocation>
+									<cbc:ID schemeID="RFS.DAX">ZWO_FRE</cbc:ID>
+									<cbc:LocationTypeCode>Warehouse</cbc:LocationTypeCode>
+								</cac:SubsidiaryLocation>
+							</cac:DespatchLocation>
+						</cac:Despatch>
+						<cac:Shipment>
+							<cbc:ID schemeID="RFS.TRC">4523722927</cbc:ID>
+							<cbc:ShippingPriorityLevelCode>49</cbc:ShippingPriorityLevelCode>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information>Wil je artikelen retour sturen?</cbc:Information>
+							<cbc:Information>- Sluit deze retourbon in bij je pakket.</cbc:Information>
+							<cbc:Information>- Zorg ervoor dat het artikel altijd in de originele verpakking zit.</cbc:Information>
+							<cbc:Information>- Geef het pakket af bij een DHL Service punt.</cbc:Information>
+							<cbc:Information>Meer over het terugsturen van je bestelling lees je op wehkamp.com-klantenservice-retourneren.</cbc:Information>
+						</cac:Shipment>
+					</cac:Delivery>
+					<cac:Price>
+						<cbc:PriceAmount currencyID="EUR">7.43</cbc:PriceAmount>
+						<cbc:BaseQuantity unitCode="EA">1.00</cbc:BaseQuantity>
+						<cac:AllowanceCharge>
+							<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+							<cbc:AllowanceChargeReasonCode>Discount</cbc:AllowanceChargeReasonCode>
+							<cbc:Amount currencyID="EUR">2.48</cbc:Amount>
+						</cac:AllowanceCharge>
+					</cac:Price>
+					<cac:Item>
+						<cbc:Description>Ik leer vormen &amp; kle</cbc:Description>
+						<cbc:Description>EANnr: 8710126195697</cbc:Description>
+						<cac:BuyersItemIdentification>
+							<cbc:ID schemeID="RFS.DAX">172769</cbc:ID>
+							<cbc:ExtendedID schemeID="RFS.DAX">000</cbc:ExtendedID>
+						</cac:BuyersItemIdentification>
+						<cac:SellersItemIdentification>
+							<cbc:ID>19569</cbc:ID>
+							<cbc:ExtendedID/>
+						</cac:SellersItemIdentification>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationSize</cbc:Name>
+							<cbc:Value>000</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationArticleNumber</cbc:Name>
+							<cbc:Value>17-27-69</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>Brand</cbc:Name>
+							<cbc:Value>Jumbo</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationShortDescription</cbc:Name>
+							<cbc:Value>Jumbo Ik leer  vormen &amp; kleuren</cbc:Value>
+						</cac:AdditionalItemProperty>
+					</cac:Item>
+					<cac:ItemPriceExtension>
+						<cbc:Amount currencyID="EUR">7.43</cbc:Amount>
+						<cac:TaxTotal>
+							<cbc:TaxAmount currencyID="EUR">1.56</cbc:TaxAmount>
+							<cac:TaxSubtotal>
+								<cbc:TaxableAmount currencyID="EUR">7.43</cbc:TaxableAmount>
+								<cbc:TaxAmount currencyID="EUR">1.56</cbc:TaxAmount>
+								<cbc:Percent>21.00</cbc:Percent>
+								<cac:TaxCategory>
+									<cbc:ID schemeID="RFS.DAX">V6</cbc:ID>
+									<cac:TaxScheme>
+										<cbc:ID schemeID="RFS.DAX">VAT</cbc:ID>
+									</cac:TaxScheme>
+								</cac:TaxCategory>
+							</cac:TaxSubtotal>
+						</cac:TaxTotal>
+					</cac:ItemPriceExtension>
+				</cac:LineItem>
+			</cac:OrderLine>
+		</oc:OrderChange>
+	</Body>
+</gm:GenericMessage>

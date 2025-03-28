@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<gm:GenericMessage xmlns:gm="http://schemas.rfsholding.com/rid/GenericMessage/v1.0"
+                   xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                   xmlns:ns4="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                   xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                   xmlns:oc="urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2">
+	<Header>
+		<AdministrationID>012</AdministrationID>
+		<SourceSystemCode>RFS.TRC</SourceSystemCode>
+		<BusinessTransactionID>cff5c4ce-b9e4-4739-9d51-eaf6b4478711</BusinessTransactionID>
+		<BusinessEntityID>224883765</BusinessEntityID>
+		<MessageType>SalesOrder</MessageType>
+		<MessageDateTime>2021-12-06T13:42:15.018Z</MessageDateTime>
+		<RoutingInformation>
+			<Property>
+				<Key>UBLVersionID</Key>
+				<Value>2.1</Value>
+			</Property>
+			<Property>
+				<Key>ProfileID</Key>
+				<Value>rid</Value>
+			</Property>
+			<Property>
+				<Key>CustomizationID</Key>
+				<Value>urn:schemas.rfshollandholding.com:transaction:TR02:SalesOrder:3.0</Value>
+			</Property>
+			<Property>
+				<Key>DocumentIdentificationStandard</Key>
+				<Value>urn:oasis:names:specification:ubl:schema:xsd:OrderChange-2</Value>
+			</Property>
+			<Property>
+				<Key>SenderParty</Key>
+				<Value>1001</Value>
+			</Property>
+			<Property>
+				<Key>SenderPartySchemeID</Key>
+				<Value>RFS.TRC</Value>
+			</Property>
+			<Property>
+				<Key>ReceiverParty</Key>
+				<Value>012</Value>
+			</Property>
+			<Property>
+				<Key>ReceiverPartySchemeID</Key>
+				<Value>RFS.DAX</Value>
+			</Property>
+		</RoutingInformation>
+	</Header>
+	<Body>
+		<oc:OrderChange>
+			<cbc:UBLVersionID schemeID="UBL">2.1</cbc:UBLVersionID>
+			<cbc:CustomizationID schemeID="RFS">urn:schemas.rfshollandholding.com:transaction:TR02:SalesOrder:3.0</cbc:CustomizationID>
+			<cbc:ProfileID schemeID="RFS">rid</cbc:ProfileID>
+			<cbc:ID schemeID="RFS.TRC">224883765</cbc:ID>
+			<cbc:UUID>0d67efa8-751e-46d8-89ab-74a90259fd82</cbc:UUID>
+			<cbc:IssueDate>2021-12-06</cbc:IssueDate>
+			<cbc:IssueTime>13:42:15.018Z</cbc:IssueTime>
+			<cbc:SequenceNumberID schemeID="RFS.TRC">0</cbc:SequenceNumberID>
+			<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>
+			<cbc:LineCountNumeric>2.00</cbc:LineCountNumeric>
+			<cac:OrderReference>
+				<cbc:ID schemeID="RFS.TRC">224883765</cbc:ID>
+				<cbc:OrderTypeCode>SalesOrder</cbc:OrderTypeCode>
+			</cac:OrderReference>
+			<cac:BuyerCustomerParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.DAX">1001</cbc:ID>
+					</cac:PartyIdentification>
+					<cac:PartyName>
+						<cbc:Name>wehkamp</cbc:Name>
+					</cac:PartyName>
+					<cac:PartyLegalEntity>
+						<cbc:RegistrationName>Wehkamp B.V.</cbc:RegistrationName>
+						<cbc:CompanyID schemeID="NL:KVK">27109571</cbc:CompanyID>
+						<cac:RegistrationAddress>
+							<cbc:CityName>Zwolle</cbc:CityName>
+						</cac:RegistrationAddress>
+						<cac:CorporateRegistrationScheme>
+							<cbc:Name>KvK</cbc:Name>
+						</cac:CorporateRegistrationScheme>
+					</cac:PartyLegalEntity>
+				</cac:Party>
+			</cac:BuyerCustomerParty>
+			<cac:SellerSupplierParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.DAX">012</cbc:ID>
+					</cac:PartyIdentification>
+				</cac:Party>
+			</cac:SellerSupplierParty>
+			<cac:OriginatorCustomerParty>
+				<cac:Party>
+					<cac:PartyIdentification>
+						<cbc:ID schemeID="RFS.TRC">73529301</cbc:ID>
+					</cac:PartyIdentification>
+					<cac:PartyName>
+						<cbc:Name>M. Loggen</cbc:Name>
+					</cac:PartyName>
+				</cac:Party>
+			</cac:OriginatorCustomerParty>
+			<cac:DeliveryTerms>
+				<cbc:ID schemeID="incoterms2010">DDP</cbc:ID>
+			</cac:DeliveryTerms>
+			<cac:TaxTotal>
+				<cbc:TaxAmount currencyID="EUR">3.98</cbc:TaxAmount>
+				<cac:TaxSubtotal>
+					<cbc:TaxableAmount currencyID="EUR">18.97</cbc:TaxableAmount>
+					<cbc:TaxAmount currencyID="EUR">3.98</cbc:TaxAmount>
+					<cbc:Percent>21.00</cbc:Percent>
+					<cac:TaxCategory>
+						<cbc:ID schemeID="RFS.DAX">V6</cbc:ID>
+						<cac:TaxScheme>
+							<cbc:ID schemeID="RFS.DAX">VAT</cbc:ID>
+						</cac:TaxScheme>
+					</cac:TaxCategory>
+				</cac:TaxSubtotal>
+			</cac:TaxTotal>
+			<cac:AnticipatedMonetaryTotal>
+				<cbc:TaxExclusiveAmount currencyID="EUR">18.97</cbc:TaxExclusiveAmount>
+				<cbc:PayableAmount currencyID="EUR">22.95</cbc:PayableAmount>
+			</cac:AnticipatedMonetaryTotal>
+			<cac:OrderLine>
+				<cac:LineItem>
+					<cbc:ID schemeID="RFS.TRC">4530118866</cbc:ID>
+					<cbc:UUID schemeID="TR">004530118866</cbc:UUID>
+					<cbc:LineStatusCode>Added</cbc:LineStatusCode>
+					<cbc:Quantity unitCode="EA">1.00</cbc:Quantity>
+					<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+					<cbc:BackOrderAllowedIndicator>true</cbc:BackOrderAllowedIndicator>
+					<cac:Delivery>
+						<cbc:ID schemeID="RFS.TRC">112275552</cbc:ID>
+						<cac:RequestedDeliveryPeriod>
+							<cbc:StartDate>2021-12-07</cbc:StartDate>
+							<cbc:StartTime>07:00:00.000Z</cbc:StartTime>
+							<cbc:EndDate>2021-12-07</cbc:EndDate>
+							<cbc:EndTime>17:00:00.000Z</cbc:EndTime>
+							<cbc:Description>07-12-2021</cbc:Description>
+						</cac:RequestedDeliveryPeriod>
+						<cac:CarrierParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.DAX">3168</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="Label">DHL PS</cbc:ID>
+							</cac:PartyIdentification>
+						</cac:CarrierParty>
+						<cac:DeliveryParty>
+							<cbc:EndpointID schemeID="DHL.PS">NL-192101</cbc:EndpointID>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">192101</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Julianaweg</cbc:StreetName>
+								<cbc:BuildingNumber>40</cbc:BuildingNumber>
+								<cbc:CityName>Akersloot</cbc:CityName>
+								<cbc:PostalZone>1921BG</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Novy Velzeboer (NL-192101)</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Tav M. Loggen (nr 5)</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Julianaweg 40</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>1921 BG Akersloot</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:Telephone>0641152278</cbc:Telephone>
+								<cbc:ElectronicMail>marjolein.loggen@rtvnh.nl</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>marjolein.loggen@rtvnh.nl</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>Loggen</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:DeliveryParty>
+						<cac:NotifyParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">19351425</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Heer Derckplantsoen</cbc:StreetName>
+								<cbc:BuildingNumber>5</cbc:BuildingNumber>
+								<cbc:CityName>Akersloot</cbc:CityName>
+								<cbc:PostalZone>1921 BN</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. Loggen</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Heer Derckplantsoen 5</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>1921 BN Akersloot</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:Telephone>0641152278</cbc:Telephone>
+								<cbc:ElectronicMail>marjolein.loggen@rtvnh.nl</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>marjolein.loggen@rtvnh.nl</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>Loggen</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:NotifyParty>
+						<cac:Despatch>
+							<cbc:RequestedDespatchDate>2021-12-07</cbc:RequestedDespatchDate>
+							<cbc:RequestedDespatchTime>00:59:00.000Z</cbc:RequestedDespatchTime>
+							<cac:DespatchLocation>
+								<cbc:ID schemeID="RFS.DAX">ZWO</cbc:ID>
+								<cbc:LocationTypeCode>Site</cbc:LocationTypeCode>
+								<cac:SubsidiaryLocation>
+									<cbc:ID schemeID="RFS.DAX">ZWO_FRE</cbc:ID>
+									<cbc:LocationTypeCode>Warehouse</cbc:LocationTypeCode>
+								</cac:SubsidiaryLocation>
+							</cac:DespatchLocation>
+						</cac:Despatch>
+						<cac:Shipment>
+							<cbc:ID schemeID="RFS.TRC">4530118866</cbc:ID>
+							<cbc:ShippingPriorityLevelCode>49</cbc:ShippingPriorityLevelCode>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information>Wil je artikelen retour sturen?</cbc:Information>
+							<cbc:Information>- Sluit deze retourbon in bij je pakket.</cbc:Information>
+							<cbc:Information>- Zorg ervoor dat het artikel altijd in de originele verpakking zit.</cbc:Information>
+							<cbc:Information>- Geef het pakket af bij een DHL Service punt.</cbc:Information>
+							<cbc:Information>Meer over het terugsturen van je bestelling lees je op wehkamp.com-klantenservice-retourneren.</cbc:Information>
+						</cac:Shipment>
+					</cac:Delivery>
+					<cac:Price>
+						<cbc:PriceAmount currencyID="EUR">4.96</cbc:PriceAmount>
+						<cbc:BaseQuantity unitCode="EA">1.00</cbc:BaseQuantity>
+						<cac:AllowanceCharge>
+							<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+							<cbc:AllowanceChargeReasonCode>Discount</cbc:AllowanceChargeReasonCode>
+							<cbc:Amount currencyID="EUR">4.96</cbc:Amount>
+						</cac:AllowanceCharge>
+					</cac:Price>
+					<cac:Item>
+						<cbc:Description>hydra intense lip ba</cbc:Description>
+						<cbc:Description>Naturel Hydra Intense EANnr: 5055757900320</cbc:Description>
+						<cac:BuyersItemIdentification>
+							<cbc:ID schemeID="RFS.DAX">16551126</cbc:ID>
+							<cbc:ExtendedID schemeID="RFS.DAX">000</cbc:ExtendedID>
+						</cac:BuyersItemIdentification>
+						<cac:SellersItemIdentification>
+							<cbc:ID>5055757900320</cbc:ID>
+							<cbc:ExtendedID/>
+						</cac:SellersItemIdentification>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationSize</cbc:Name>
+							<cbc:Value>000</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationArticleNumber</cbc:Name>
+							<cbc:Value>16-551-126</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationColor</cbc:Name>
+							<cbc:Value>Naturel Hydra Intense</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>Brand</cbc:Name>
+							<cbc:Value>Fushi</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationShortDescription</cbc:Name>
+							<cbc:Value>Fushi Hydra Intense lippenbalsem</cbc:Value>
+						</cac:AdditionalItemProperty>
+					</cac:Item>
+					<cac:ItemPriceExtension>
+						<cbc:Amount currencyID="EUR">4.96</cbc:Amount>
+						<cac:TaxTotal>
+							<cbc:TaxAmount currencyID="EUR">1.04</cbc:TaxAmount>
+							<cac:TaxSubtotal>
+								<cbc:TaxableAmount currencyID="EUR">4.96</cbc:TaxableAmount>
+								<cbc:TaxAmount currencyID="EUR">1.04</cbc:TaxAmount>
+								<cbc:Percent>21.00</cbc:Percent>
+								<cac:TaxCategory>
+									<cbc:ID schemeID="RFS.DAX">V6</cbc:ID>
+									<cac:TaxScheme>
+										<cbc:ID schemeID="RFS.DAX">VAT</cbc:ID>
+									</cac:TaxScheme>
+								</cac:TaxCategory>
+							</cac:TaxSubtotal>
+						</cac:TaxTotal>
+					</cac:ItemPriceExtension>
+				</cac:LineItem>
+			</cac:OrderLine>
+			<cac:OrderLine>
+				<cac:LineItem>
+					<cbc:ID schemeID="RFS.TRC">4530118867</cbc:ID>
+					<cbc:UUID schemeID="TR">004530118867</cbc:UUID>
+					<cbc:LineStatusCode>Added</cbc:LineStatusCode>
+					<cbc:Quantity unitCode="EA">1.00</cbc:Quantity>
+					<cbc:PartialDeliveryIndicator>false</cbc:PartialDeliveryIndicator>
+					<cbc:BackOrderAllowedIndicator>true</cbc:BackOrderAllowedIndicator>
+					<cac:Delivery>
+						<cbc:ID schemeID="RFS.TRC">112275552</cbc:ID>
+						<cac:RequestedDeliveryPeriod>
+							<cbc:StartDate>2021-12-07</cbc:StartDate>
+							<cbc:StartTime>07:00:00.000Z</cbc:StartTime>
+							<cbc:EndDate>2021-12-07</cbc:EndDate>
+							<cbc:EndTime>17:00:00.000Z</cbc:EndTime>
+							<cbc:Description>07-12-2021</cbc:Description>
+						</cac:RequestedDeliveryPeriod>
+						<cac:CarrierParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.DAX">3168</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="Label">DHL PS</cbc:ID>
+							</cac:PartyIdentification>
+						</cac:CarrierParty>
+						<cac:DeliveryParty>
+							<cbc:EndpointID schemeID="DHL.PS">NL-192101</cbc:EndpointID>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">192101</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Julianaweg</cbc:StreetName>
+								<cbc:BuildingNumber>40</cbc:BuildingNumber>
+								<cbc:CityName>Akersloot</cbc:CityName>
+								<cbc:PostalZone>1921BG</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Novy Velzeboer (NL-192101)</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Tav M. Loggen (nr 5)</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Julianaweg 40</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>1921 BG Akersloot</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:Telephone>0641152278</cbc:Telephone>
+								<cbc:ElectronicMail>marjolein.loggen@rtvnh.nl</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>marjolein.loggen@rtvnh.nl</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>Loggen</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:DeliveryParty>
+						<cac:NotifyParty>
+							<cac:PartyIdentification>
+								<cbc:ID schemeID="RFS.TRC">19351425</cbc:ID>
+							</cac:PartyIdentification>
+							<cac:Language>
+								<cbc:LocaleCode>nl_NL</cbc:LocaleCode>
+							</cac:Language>
+							<cac:PostalAddress>
+								<cbc:AddressFormatCode>NLD</cbc:AddressFormatCode>
+								<cbc:StreetName>Heer Derckplantsoen</cbc:StreetName>
+								<cbc:BuildingNumber>5</cbc:BuildingNumber>
+								<cbc:CityName>Akersloot</cbc:CityName>
+								<cbc:PostalZone>1921 BN</cbc:PostalZone>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>M. Loggen</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>Heer Derckplantsoen 5</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line>1921 BN Akersloot</cbc:Line>
+								</cac:AddressLine>
+								<cac:AddressLine>
+									<cbc:Line> </cbc:Line>
+								</cac:AddressLine>
+								<cac:Country>
+									<cbc:IdentificationCode>NL</cbc:IdentificationCode>
+								</cac:Country>
+							</cac:PostalAddress>
+							<cac:Contact>
+								<cbc:Telephone>0641152278</cbc:Telephone>
+								<cbc:ElectronicMail>marjolein.loggen@rtvnh.nl</cbc:ElectronicMail>
+								<cac:OtherCommunication>
+									<cbc:ChannelCode listID="RFS.CarrierNotifyMethod">Mail</cbc:ChannelCode>
+									<cbc:Value>marjolein.loggen@rtvnh.nl</cbc:Value>
+								</cac:OtherCommunication>
+							</cac:Contact>
+							<cac:Person>
+								<cbc:FirstName>M.</cbc:FirstName>
+								<cbc:FamilyName>Loggen</cbc:FamilyName>
+								<cbc:GenderCode>V</cbc:GenderCode>
+							</cac:Person>
+						</cac:NotifyParty>
+						<cac:Despatch>
+							<cbc:RequestedDespatchDate>2021-12-07</cbc:RequestedDespatchDate>
+							<cbc:RequestedDespatchTime>00:59:00.000Z</cbc:RequestedDespatchTime>
+							<cac:DespatchLocation>
+								<cbc:ID schemeID="RFS.DAX">ZWO</cbc:ID>
+								<cbc:LocationTypeCode>Site</cbc:LocationTypeCode>
+								<cac:SubsidiaryLocation>
+									<cbc:ID schemeID="RFS.DAX">ZWO_FRE</cbc:ID>
+									<cbc:LocationTypeCode>Warehouse</cbc:LocationTypeCode>
+								</cac:SubsidiaryLocation>
+							</cac:DespatchLocation>
+						</cac:Despatch>
+						<cac:Shipment>
+							<cbc:ID schemeID="RFS.TRC">4530118867</cbc:ID>
+							<cbc:ShippingPriorityLevelCode>49</cbc:ShippingPriorityLevelCode>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information/>
+							<cbc:Information>Wil je artikelen retour sturen?</cbc:Information>
+							<cbc:Information>- Sluit deze retourbon in bij je pakket.</cbc:Information>
+							<cbc:Information>- Zorg ervoor dat het artikel altijd in de originele verpakking zit.</cbc:Information>
+							<cbc:Information>- Geef het pakket af bij een DHL Service punt.</cbc:Information>
+							<cbc:Information>Meer over het terugsturen van je bestelling lees je op wehkamp.com-klantenservice-retourneren.</cbc:Information>
+						</cac:Shipment>
+					</cac:Delivery>
+					<cac:Price>
+						<cbc:PriceAmount currencyID="EUR">14.01</cbc:PriceAmount>
+						<cbc:BaseQuantity unitCode="EA">1.00</cbc:BaseQuantity>
+						<cac:AllowanceCharge>
+							<cbc:ChargeIndicator>false</cbc:ChargeIndicator>
+							<cbc:AllowanceChargeReasonCode>Discount</cbc:AllowanceChargeReasonCode>
+							<cbc:Amount currencyID="EUR">0.00</cbc:Amount>
+						</cac:AllowanceCharge>
+					</cac:Price>
+					<cac:Item>
+						<cbc:Description>Kunstplant</cbc:Description>
+						<cbc:Description>Naturel EANnr: 8720195376958</cbc:Description>
+						<cac:BuyersItemIdentification>
+							<cbc:ID schemeID="RFS.DAX">16770655</cbc:ID>
+							<cbc:ExtendedID schemeID="RFS.DAX">000</cbc:ExtendedID>
+						</cac:BuyersItemIdentification>
+						<cac:SellersItemIdentification>
+							<cbc:ID>106110</cbc:ID>
+							<cbc:ExtendedID/>
+						</cac:SellersItemIdentification>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationSize</cbc:Name>
+							<cbc:Value>000</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationArticleNumber</cbc:Name>
+							<cbc:Value>16-770-655</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationColor</cbc:Name>
+							<cbc:Value>Naturel</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>Brand</cbc:Name>
+							<cbc:Value>Urban Nature Culture</cbc:Value>
+						</cac:AdditionalItemProperty>
+						<cac:AdditionalItemProperty>
+							<cbc:Name>PresentationShortDescription</cbc:Name>
+							<cbc:Value>Urban Nature Culture kunstplant Loco</cbc:Value>
+						</cac:AdditionalItemProperty>
+					</cac:Item>
+					<cac:ItemPriceExtension>
+						<cbc:Amount currencyID="EUR">14.01</cbc:Amount>
+						<cac:TaxTotal>
+							<cbc:TaxAmount currencyID="EUR">2.94</cbc:TaxAmount>
+							<cac:TaxSubtotal>
+								<cbc:TaxableAmount currencyID="EUR">14.01</cbc:TaxableAmount>
+								<cbc:TaxAmount currencyID="EUR">2.94</cbc:TaxAmount>
+								<cbc:Percent>21.00</cbc:Percent>
+								<cac:TaxCategory>
+									<cbc:ID schemeID="RFS.DAX">V6</cbc:ID>
+									<cac:TaxScheme>
+										<cbc:ID schemeID="RFS.DAX">VAT</cbc:ID>
+									</cac:TaxScheme>
+								</cac:TaxCategory>
+							</cac:TaxSubtotal>
+						</cac:TaxTotal>
+					</cac:ItemPriceExtension>
+				</cac:LineItem>
+			</cac:OrderLine>
+		</oc:OrderChange>
+	</Body>
+</gm:GenericMessage>

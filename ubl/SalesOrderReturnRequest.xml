@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ns4:SalesOrderReturnRequestBody xmlns="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                                 xmlns:ns2="urn:rfs:schema:xsd:ExtendedCommonBasicComponents-2"
+                                 xmlns:ns3="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                                 xmlns:ns4="urn:rfs:schema:xsd:SalesOrderReturnRequestBody-1">
+    <ID schemeID="WFS.WMOS.ZW2">0000079312026-02-1503.47.10</ID>
+    <UUID schemeID="TR">004229998260</UUID>
+    <ns2:ItemAssessmentResultCode>OK</ns2:ItemAssessmentResultCode>
+    <Quantity unitCode="EA">1</Quantity>
+    <ns3:DeliveryCustomerParty>
+        <ns3:Party>
+            <ns3:PartyIdentification>
+                <ID schemeID="RFS.DAX">ZW2</ID>
+            </ns3:PartyIdentification>
+            <ns3:Person>
+                <ID schemeID="WFS.WMOS.ZW2">EVDLAAN</ID>
+            </ns3:Person>
+        </ns3:Party>
+    </ns3:DeliveryCustomerParty>
+</ns4:SalesOrderReturnRequestBody>

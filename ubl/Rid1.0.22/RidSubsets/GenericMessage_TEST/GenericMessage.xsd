@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Revision info: $Id: GenericMessage.xsd 785 2012-09-24 09:14:23Z dlub $-->
+<!-- this xsd has been developed for test-pursoses only. All Rid messages are covered. 
+please add new messages  by adding the appropriate namespaces , imports and choices.
+-->
+<xs:schema xmlns="http://schemas.rfsholding.com/rid/GenericMessage/v1.0" xmlns:ar="http://schemas.rfsholding.com/rid/ApplicationResponse/v1.0" xmlns:c="http://schemas.rfsholding.com/rid/Catalogue/v1.0" xmlns:da="http://schemas.rfsholding.com/rid/DespatchAdvice/v1.0" xmlns:fo="http://schemas.rfsholding.com/rid/FulfilmentOrder/v1.0" xmlns:ir="http://schemas.rfsholding.com/rid/InventoryReport/v1.0" xmlns:pa="http://schemas.rfsholding.com/rid/ProductActivity/v1.0" xmlns:po="http://schemas.rfsholding.com/rid/PurchaseOrder/v1.0" xmlns:por="http://schemas.rfsholding.com/rid/PurchaseOrderResponse/v1.0" xmlns:ra="http://schemas.rfsholding.com/rid/ReceiptAdvice/v1.0" xmlns:so="http://schemas.rfsholding.com/rid/SalesOrder/v1.0" xmlns:sbcn="http://schemas.rfsholding.com/rid/SelfBilledCreditNote/v1.0" xmlns:sbi="http://schemas.rfsholding.com/rid/SelfBilledInvoice/v1.0" xmlns:sbpo="http://schemas.rfsholding.com/rid/SelfBilledPurchaseOrder/v1.0" xmlns:sbso="http://schemas.rfsholding.com/rid/SelfBilledSalesOrder/v1.0" xmlns:s="http://schemas.rfsholding.com/rid/Supplier/v1.0" xmlns:cmn="http:/schemas.rfsholding.com/rid/PS_HeaderProperties/v1.0" xmlns:b="http://schemas.microsoft.com/BizTalk/2003" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://schemas.rfsholding.com/rid/GenericMessage/v1.0">
+	<xs:import namespace="http://schemas.rfsholding.com/rid/ApplicationResponse/v1.0" schemaLocation="../ApplicationResponse/Rid-ApplicationResponse-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/Catalogue/v1.0" schemaLocation="../Catalogue/Rid-Catalogue-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/DespatchAdvice/v1.0" schemaLocation="../DespatchAdvice/Rid-DespatchAdvice-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/FulfilmentOrder/v1.0" schemaLocation="../FulfilmentOrder/Rid-FulfilmentOrder-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/InventoryReport/v1.0" schemaLocation="../InventoryReport/Rid-InventoryReport-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/ProductActivity/v1.0" schemaLocation="../ProductActivity/Rid-ProductActivity-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/PurchaseOrder/v1.0" schemaLocation="../PurchaseOrder/Rid-PurchaseOrder-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/PurchaseOrderResponse/v1.0" schemaLocation="../PurchaseOrderResponse/Rid-PurchaseOrderResponse-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/ReceiptAdvice/v1.0" schemaLocation="../ReceiptAdvice/Rid-ReceiptAdvice-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/SalesOrder/v1.0" schemaLocation="../SalesOrder/Rid-SalesOrder-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/SelfBilledCreditNote/v1.0" schemaLocation="../SelfBilledCreditNote/Rid-SelfBilledCreditNote-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/SelfBilledInvoice/v1.0" schemaLocation="../SelfBilledInvoice/Rid-SelfBilledInvoice-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/SelfBilledPurchaseOrder/v1.0" schemaLocation="../SelfBilledPurchaseOrder/Rid-SelfBilledPurchaseOrder-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/SelfBilledSalesOrder/v1.0" schemaLocation="../SelfBilledSalesOrder/Rid-SelfBilledSalesOrder-v1.0.xsd"/>
+	<xs:import namespace="http://schemas.rfsholding.com/rid/Supplier/v1.0" schemaLocation="../Supplier/Rid-Supplier-v1.0.xsd"/>
+	<xs:annotation>
+		<xs:appinfo>
+			<b:schemaInfo is_envelope="no" xmlns:b="http://schemas.microsoft.com/BizTalk/2003"/>
+			<b:imports>
+				<b:namespace prefix="cmn" uri="http:/schemas.rfsholding.com/rid/PS_HeaderProperties/v1.0" location=".\PS_HeaderProperties.xsd"/>
+			</b:imports>
+		</xs:appinfo>
+	</xs:annotation>
+	<xs:element name="GenericMessage">
+		<xs:annotation>
+			<xs:appinfo>
+				<b:properties>
+					<b:property name="cmn:AdministrationID" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='AdministrationID' and namespace-uri()='']"/>
+					<b:property name="cmn:SourceSystemCode" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='SourceSystemCode' and namespace-uri()='']"/>
+					<b:property name="cmn:BusinessTransactionID" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='BusinessTransactionID' and namespace-uri()='']"/>
+					<b:property name="cmn:MessageType" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='MessageType' and namespace-uri()='']"/>
+					<b:property name="cmn:MessageDateTime" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='MessageDateTime' and namespace-uri()='']"/>
+					<b:property name="cmn:BusinessEntityID" xpath="/*[local-name()='GenericMessage' and namespace-uri()='http://schemas.rfsholding.com/rid/GenericMessage/v1.0']/*[local-name()='Header' and namespace-uri()='']/*[local-name()='BusinessEntityID' and namespace-uri()='']"/>
+				</b:properties>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:annotation>
+						<xs:appinfo>
+							<b:properties>
+								<b:property name="cmn:Administration" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='Administration' and namespace-uri()='']"/>
+								<b:property name="cmn:SourceSystem" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='SourceSystem' and namespace-uri()='']"/>
+								<b:property name="cmn:SourceMessageType" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='SourceMessageType' and namespace-uri()='']"/>
+								<b:property name="cmn:SourceMessageID" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='SourceMessageID' and namespace-uri()='']"/>
+								<b:property name="cmn:MessageDateTime" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='MessageDateTime' and namespace-uri()='']"/>
+								<b:property name="cmn:BusinessEntityID" xpath="/*[local-name()='Header' and namespace-uri()='http://Rfs.nl/Common/GenericMessage/v1.0']/*[local-name()='BusinessEntityID' and namespace-uri()='']"/>
+							</b:properties>
+						</xs:appinfo>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AdministrationID">
+								<xs:annotation>
+									<xs:appinfo>
+										<b:fieldInfo notes="This is the 'Data area Id' in AX"/>
+									</xs:appinfo>
+								</xs:annotation>
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="SourceSystemCode">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">										
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BusinessTransactionID">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">										
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="BusinessEntityID" minOccurs="0">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="MessageType">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="MessageDateTime" type="xs:dateTime">
+								<xs:annotation>
+									<xs:appinfo>
+										<b:fieldInfo notes="UTC"/>
+									</xs:appinfo>
+								</xs:annotation>
+							</xs:element>
+							<xs:element name="RoutingInformation" minOccurs="0" maxOccurs="1">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Property" minOccurs="0" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Key" type="xs:string"/>
+													<xs:element name="Value" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Body">
+					<xs:complexType>
+						<xs:choice>
+							<!--Rid-choices-->
+							<xs:element ref="ar:ApplicationResponse"/>
+							<xs:element ref="c:Catalogue"/>
+							<xs:element ref="da:DespatchAdvice"/>
+							<xs:element ref="fo:FulfilmentOrder"/>
+							<xs:element ref="ir:InventoryReport"/>
+							<xs:element ref="pa:ProductActivity"/>
+							<xs:element ref="po:PurchaseOrder"/>
+							<xs:element ref="por:PurchaseOrderResponse"/>
+							<xs:element ref="ra:ReceiptAdvice"/>
+							<xs:element ref="so:SalesOrder"/>
+							<xs:element ref="sbcn:SelfBilledCreditNote"/>
+							<xs:element ref="sbi:SelfBilledInvoice"/>
+							<xs:element ref="sbpo:SelfBilledPurchaseOrder"/>
+							<xs:element ref="sbso:SelfBilledSalesOrder"/>
+							<xs:element ref="s:Supplier"/>
+						</xs:choice>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

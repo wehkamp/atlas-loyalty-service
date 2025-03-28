@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 (http://www.altova.com) by R. Overkamp (Wehkamp BV) -->
+<!--Revision info: $Id: Rid-ReceiptAdvice-v1.0.xsd 806 2012-10-18 11:19:09Z dlub $-->
+<!-- change history
+    date           change                          				  						requestor           author			sheet
+    23-01-2012  added this changehistory  (xslx  1.5)         			                   		d.lub
+    24-01-2012  added extension  (xslx 1.5)						 				k. duvekot		d.lub	
+    24-01-2012  renamed receiptAdviseAggregate (Advice)										d.lub	
+    10-02-2012  xslx version 1.7 									 	 									d.lub
+			- added receiptadvicetypecode 										(duvekot)
+			- changed cardinalities 													(stokman)
+			- added locationtypecode in xsd 										(lub)
+    09-03-2012  changed party identification 										v.1.8.0			d. lub		  	1.8.0
+			  removed doc reference
+    13-03-2012	changed name for extensionContentDatatype file 	 lub/schuijt 		d. lub		  
+	09-10-2012	  changed order of imports									s nefs/biztalk 	d.lub			 	1.8.x				    
+
+
+-->
+<!--
+  Library:           OASIS Universal Business Language (UBL) 2.1
+                     http://docs.oasis-open.org/ubl/os-UBL-2.1/
+  Module:            UBL-ReceiptAdvice-2.1.xsd
+  Generated on:      20110517-1540z
+-->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:qdt="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0"
+xmlns:udt="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" xmlns:cbc="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" xmlns:cac="http://schemas.rfsholding.com/rid/ReceiptAdviceAggregateComponents/v1.0"  xmlns:ecbc="http://schemas.rfsholding.com/rid/ExtendedReceiptAdviceBasicComponents/v1.0" xmlns:ecac="http://schemas.rfsholding.com/rid/ExtendedReceiptAdviceAggregateComponents/v1.0" xmlns="http://schemas.rfsholding.com/rid/ReceiptAdvice/v1.0" xmlns:ext="http://schemas.rfsholding.com/rid/ReceiptAdviceExtensionComponents/v1.0"  xmlns:ccts="urn:un:unece:uncefact:documentation:2" targetNamespace="http://schemas.rfsholding.com/rid/ReceiptAdvice/v1.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0">
+	<!-- ===== Imports ===== -->
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/UnqualifiedDataTypes/v1.0" schemaLocation="../common/Rid-UnqualifiedDataTypes-v1.0.xsd"/>
+    <xsd:import namespace="http://schemas.rfsholding.com/rid/QualifiedDataTypes/v1.0" schemaLocation="../common/Rid-QualifiedDataTypes-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/CommonBasicComponents/v1.0" schemaLocation="../common/Rid-CommonBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ReceiptAdviceAggregateComponents/v1.0" schemaLocation="Rid-ReceiptAdviceAggregateComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedReceiptAdviceBasicComponents/v1.0" schemaLocation="Rid-ExtendedReceiptAdviceBasicComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ExtendedReceiptAdviceAggregateComponents/v1.0" schemaLocation="Rid-ExtendedReceiptAdviceAggregateComponents-v1.0.xsd"/>
+	<xsd:import namespace="http://schemas.rfsholding.com/rid/ReceiptAdviceExtensionComponents/v1.0" schemaLocation="Rid-ReceiptAdviceExtensionComponents-v1.0.xsd"/>
+	<!-- ===== Element Declaration ===== -->
+	<xsd:element name="ReceiptAdvice" type="ReceiptAdviceType">
+		<xsd:annotation>
+			<xsd:documentation>This element MUST be conveyed as the root element in any instance document based on this Schema expression</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- ===== Type Definition ===== -->
+	<!-- ===== Aggregate Business Information Entity Type Definition ===== -->
+	<xsd:complexType name="ReceiptAdviceType">
+		<xsd:annotation>
+			<xsd:documentation>
+				<ccts:Component>
+					<ccts:ComponentType>ABIE</ccts:ComponentType>
+					<ccts:DictionaryEntryName>Receipt Advice. Details</ccts:DictionaryEntryName>
+					<ccts:Definition>The document used to describe the receipt of goods and services.</ccts:Definition>
+					<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+					<ccts:AlternativeBusinessTerms>Receipt, Delivery Acknowledgement</ccts:AlternativeBusinessTerms>
+				</ccts:Component>
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element ref="ext:UBLExtensions" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>A container for all extensions present in the document.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:UBLVersionID" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. UBL Version Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>The earliest version of the UBL 2 schema for this document type that defines all of the elements that might be encountered in the current instance.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>UBL Version Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>2.0.5</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:CustomizationID" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Customization Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Identifies a user-defined customization of UBL for a specific use.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>Customization Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>NES</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ProfileID" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Profile Identifier. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>Identifies a user-defined profile of the subset of UBL being used.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>Profile Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+							<ccts:Examples>BasicProcurementProcess</ccts:Examples>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:ID" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Identifier</ccts:DictionaryEntryName>
+							<ccts:Definition>An identifier for the Receipt Advice assigned by Delivery (Party).</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>Identifier</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Identifier</ccts:RepresentationTerm>
+							<ccts:DataType>Identifier. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueDate" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Issue Date. Date</ccts:DictionaryEntryName>
+							<ccts:Definition>The date assigned by Delivery (Party) on which the Receipt Advice was issued.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Date</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Date</ccts:RepresentationTerm>
+							<ccts:DataType>Date. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:IssueTime" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Issue Time. Time</ccts:DictionaryEntryName>
+							<ccts:Definition>The time assigned by Delivery (Party) at which the Receipt Advice was issued.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>Issue Time</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Time</ccts:RepresentationTerm>
+							<ccts:DataType>Time. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cbc:LineCountNumeric" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>BBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Line Count. Numeric</ccts:DictionaryEntryName>
+							<ccts:Definition>The number of lines in the document.</ccts:Definition>
+							<ccts:Cardinality>0..1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>Line Count</ccts:PropertyTerm>
+							<ccts:RepresentationTerm>Numeric</ccts:RepresentationTerm>
+							<ccts:DataType>Numeric. Type</ccts:DataType>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:DeliveryCustomerParty" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Delivery_ Customer Party. Customer Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to the Delivery Party.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Delivery</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Customer Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Customer Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:DespatchSupplierParty" minOccurs="1" maxOccurs="1">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Despatch_ Supplier Party. Supplier Party</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to the Dispatch Party.</ccts:Definition>
+							<ccts:Cardinality>1</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTermQualifier>Despatch</ccts:PropertyTermQualifier>
+							<ccts:PropertyTerm>Supplier Party</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Supplier Party</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element ref="cac:ReceiptLine" minOccurs="1" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>
+						<ccts:Component>
+							<ccts:ComponentType>ASBIE</ccts:ComponentType>
+							<ccts:DictionaryEntryName>Receipt Advice. Receipt Line</ccts:DictionaryEntryName>
+							<ccts:Definition>An association to Receipt Advice Line.</ccts:Definition>
+							<ccts:Cardinality>1..n</ccts:Cardinality>
+							<ccts:ObjectClass>Receipt Advice</ccts:ObjectClass>
+							<ccts:PropertyTerm>Receipt Line</ccts:PropertyTerm>
+							<ccts:AssociatedObjectClass>Receipt Line</ccts:AssociatedObjectClass>
+						</ccts:Component>
+					</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>
+<!-- ===== Copyright Notice ===== -->
+<!--
+  OASIS takes no position regarding the validity or scope of any 
+  intellectual property or other rights that might be claimed to pertain 
+  to the implementation or use of the technology described in this 
+  document or the extent to which any license under such rights 
+  might or might not be available; neither does it represent that it has 
+  made any effort to identify any such rights. Information on OASIS's 
+  procedures with respect to rights in OASIS specifications can be 
+  found at the OASIS website. Copies of claims of rights made 
+  available for publication and any assurances of licenses to be made 
+  available, or the result of an attempt made to obtain a general 
+  license or permission for the use of such proprietary rights by 
+  implementors or users of this specification, can be obtained from 
+  the OASIS Executive Director.
+
+  OASIS invites any interested party to bring to its attention any 
+  copyrights, patents or patent applications, or other proprietary 
+  rights which may cover technology that may be required to 
+  implement this specification. Please address the information to the 
+  OASIS Executive Director.
+  
+  Copyright (C) OASIS Open 2001-2011. All Rights Reserved.
+
+  This document and translations of it may be copied and furnished to 
+  others, and derivative works that comment on or otherwise explain 
+  it or assist in its implementation may be prepared, copied, 
+  published and distributed, in whole or in part, without restriction of 
+  any kind, provided that the above copyright notice and this 
+  paragraph are included on all such copies and derivative works. 
+  However, this document itself may not be modified in any way, 
+  such as by removing the copyright notice or references to OASIS, 
+  except as needed for the purpose of developing OASIS 
+  specifications, in which case the procedures for copyrights defined 
+  in the OASIS Intellectual Property Rights document must be 
+  followed, or as required to translate it into languages other than 
+  English. 
+
+  The limited permissions granted above are perpetual and will not be 
+  revoked by OASIS or its successors or assigns. 
+
+  This document and the information contained herein is provided on 
+  an "AS IS" basis and OASIS DISCLAIMS ALL WARRANTIES, 
+  EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY 
+  WARRANTY THAT THE USE OF THE INFORMATION HEREIN 
+  WILL NOT INFRINGE ANY RIGHTS OR ANY IMPLIED 
+  WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A 
+  PARTICULAR PURPOSE.    
+-->
