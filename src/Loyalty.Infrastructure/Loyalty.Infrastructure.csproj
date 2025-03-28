@@ -33,7 +33,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OMS.Common.Mapper\OMS.Common.Mapper.csproj" />
     <ProjectReference Include="..\Loyalty.Application\Loyalty.Application.csproj" />
     <ProjectReference Include="..\Loyalty.Domain\Loyalty.Domain.csproj" />
   </ItemGroup>

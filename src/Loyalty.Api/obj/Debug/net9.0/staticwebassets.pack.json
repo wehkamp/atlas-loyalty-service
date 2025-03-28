@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/swagger/swagger.js",
+      "PackagePath": "staticwebassets/swagger/swagger.js"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.Loyalty.Api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.Loyalty.Api.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.Loyalty.Api.props",
+      "PackagePath": "build\\Loyalty.Api.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.Loyalty.Api.props",
+      "PackagePath": "buildMultiTargeting\\Loyalty.Api.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.Loyalty.Api.props",
+      "PackagePath": "buildTransitive\\Loyalty.Api.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

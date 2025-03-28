@@ -11,7 +11,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Loyalty.Infrastructure.External.Kafka.Consumers.AuditTrailCommands;
 using System.Reflection;
-using OMS.Common.Storage.AWS.S3bucket.Configuration;
 
 namespace Loyalty.Infrastructure;
 public static class DependencyInjectionExtensions
@@ -127,8 +126,6 @@ public static class DependencyInjectionExtensions
 
     private static IServiceCollection AddStorage(this IServiceCollection services)
     {
-        services.AddAwsS3BucketConfiguration();
-
         return services;
     }
 }

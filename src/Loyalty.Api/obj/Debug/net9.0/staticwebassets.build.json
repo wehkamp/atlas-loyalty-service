@@ -1,0 +1,702 @@
+{
+  "Version": 1,
+  "Hash": "HlUz0rWsUFqXyV3+bvyn4ks3f9pqnIl8BRknh9Ig/2Q=",
+  "Source": "Loyalty.Api",
+  "BasePath": "_content/Loyalty.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Loyalty.Api/wwwroot",
+      "Source": "Loyalty.Api",
+      "ContentRoot": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/",
+      "BasePath": "_content/Loyalty.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/782uo20mrg-l52nw2absz.gz",
+      "SourceId": "Loyalty.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/Loyalty.Api",
+      "RelativePath": "swagger/swagger#[.{fingerprint=l52nw2absz}]?.js.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/swagger/swagger.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "voji5iuteh",
+      "Integrity": "LwEwZ1SPS2gp22dB59hNtkACFqblDSKRP5gZkSVCqZo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/swagger/swagger.js"
+    },
+    {
+      "Identity": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/dhsdjddp0m-cloegdo1po.gz",
+      "SourceId": "Loyalty.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/Loyalty.Api",
+      "RelativePath": "favicon#[.{fingerprint=cloegdo1po}]?.ico.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/favicon.ico",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "rqdptskpoa",
+      "Integrity": "LUFLRC7Xlxv4QeXbPekcz24eVsOBuc9kqB/xiQ2rDuY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/favicon.ico",
+      "SourceId": "Loyalty.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/",
+      "BasePath": "_content/Loyalty.Api",
+      "RelativePath": "favicon#[.{fingerprint}]?.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "cloegdo1po",
+      "Integrity": "AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/swagger/swagger.js",
+      "SourceId": "Loyalty.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/",
+      "BasePath": "_content/Loyalty.Api",
+      "RelativePath": "swagger/swagger#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "l52nw2absz",
+      "Integrity": "qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/swagger/swagger.js"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "favicon.cloegdo1po.ico",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/dhsdjddp0m-cloegdo1po.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001689189189"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "591"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LUFLRC7Xlxv4QeXbPekcz24eVsOBuc9kqB/xiQ2rDuY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cloegdo1po"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.cloegdo1po.ico",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1150"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cloegdo1po"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.cloegdo1po.ico.gz",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/dhsdjddp0m-cloegdo1po.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LUFLRC7Xlxv4QeXbPekcz24eVsOBuc9kqB/xiQ2rDuY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "cloegdo1po"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LUFLRC7Xlxv4QeXbPekcz24eVsOBuc9kqB/xiQ2rDuY="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/dhsdjddp0m-cloegdo1po.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001689189189"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "591"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LUFLRC7Xlxv4QeXbPekcz24eVsOBuc9kqB/xiQ2rDuY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1150"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-AJjvakpkuL5u7+xotvXXMXHnDZS3FS6qd5s473GdagE="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.gz",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/dhsdjddp0m-cloegdo1po.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "591"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LUFLRC7Xlxv4QeXbPekcz24eVsOBuc9kqB/xiQ2rDuY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LUFLRC7Xlxv4QeXbPekcz24eVsOBuc9kqB/xiQ2rDuY="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/swagger.js",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/782uo20mrg-l52nw2absz.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004716981132"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LwEwZ1SPS2gp22dB59hNtkACFqblDSKRP5gZkSVCqZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/swagger.js",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/swagger/swagger.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "367"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/swagger.js.gz",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/782uo20mrg-l52nw2absz.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LwEwZ1SPS2gp22dB59hNtkACFqblDSKRP5gZkSVCqZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-LwEwZ1SPS2gp22dB59hNtkACFqblDSKRP5gZkSVCqZo="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/swagger.l52nw2absz.js",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/782uo20mrg-l52nw2absz.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004716981132"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LwEwZ1SPS2gp22dB59hNtkACFqblDSKRP5gZkSVCqZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l52nw2absz"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/swagger.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/swagger.l52nw2absz.js",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/wwwroot/swagger/swagger.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "367"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l52nw2absz"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/swagger.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-qTK1DZKXG5lbgh2ftDDW7vV8LFDj5BMFMw0+nWwGQtU="
+        }
+      ]
+    },
+    {
+      "Route": "swagger/swagger.l52nw2absz.js.gz",
+      "AssetFile": "/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Api/obj/Debug/net9.0/compressed/782uo20mrg-l52nw2absz.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "211"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"LwEwZ1SPS2gp22dB59hNtkACFqblDSKRP5gZkSVCqZo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 28 Mar 2025 14:15:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l52nw2absz"
+        },
+        {
+          "Name": "label",
+          "Value": "swagger/swagger.js.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-LwEwZ1SPS2gp22dB59hNtkACFqblDSKRP5gZkSVCqZo="
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Uru5WNNLbowlMJw8DpSZZ1AkJuVK+qnXLSZ855oQlJY=",
+  "Source": "Loyalty.KafkaProcessors",
+  "BasePath": "_content/Loyalty.KafkaProcessors",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

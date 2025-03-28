@@ -6,10 +6,10 @@
       "dotnetRunMessages": true,
       "launchBrowser": false,
       "launchUrl": "swagger/index.html",
-      "applicationUrl": "http://localhost:6510",
+      "applicationUrl": "http://localhost:6520",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "http://+:6510",
+        "ASPNETCORE_URLS": "http://+:6520",
         "CONTAINER_ENVIRONMENT": "local"
       }
     },
@@ -18,10 +18,10 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger/index.html",
-      "applicationUrl": "http://localhost:6510",
+      "applicationUrl": "http://localhost:6520",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "ASPNETCORE_URLS": "http://+:6510",
+        "ASPNETCORE_URLS": "http://+:6520",
         "CONTAINER_ENVIRONMENT": "local"
       }
     }

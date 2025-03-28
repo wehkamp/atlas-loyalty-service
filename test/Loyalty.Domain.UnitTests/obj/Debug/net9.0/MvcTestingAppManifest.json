@@ -1,0 +1,6 @@
+{
+  "Loyalty.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/julietteroodhardt\/Documents\/GitHub\/atlas-loyalty-service\/src\/Loyalty.Api",
+  "Loyalty.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/julietteroodhardt\/Documents\/GitHub\/atlas-loyalty-service\/src\/Loyalty.Application",
+  "Loyalty.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/julietteroodhardt\/Documents\/GitHub\/atlas-loyalty-service\/src\/Loyalty.Domain",
+  "Loyalty.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/julietteroodhardt\/Documents\/GitHub\/atlas-loyalty-service\/src\/Loyalty.Infrastructure"
+}

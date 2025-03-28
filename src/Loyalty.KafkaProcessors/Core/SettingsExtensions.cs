@@ -3,7 +3,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using System;
-using OMS.Common.Storage.AWS.S3bucket.Configuration.Options;
 
 namespace Loyalty.KafkaProcessors.Core;
 
@@ -12,7 +11,6 @@ public static class SettingsExtensions
     public static void AddSettings(this IServiceCollection services, IConfiguration configuration)
     {
         AddSettingsLocal<KafkaSettings>(services, configuration, "Kafka");
-        AddSettingsLocal<AwsS3BucketOptions>(services, configuration, "Storage:S3Bucket");
     }
 
     private static void AddSettingsLocal<TSettings>(IServiceCollection services, IConfiguration configuration, string? key = null, Action<TSettings>? postConfigureOptions = null) where TSettings : class

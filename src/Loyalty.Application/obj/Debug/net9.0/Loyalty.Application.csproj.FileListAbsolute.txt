@@ -1,0 +1,16 @@
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.csproj.AssemblyReference.cache
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.AssemblyInfoInputs.cache
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.AssemblyInfo.cs
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.csproj.CoreCompileInputs.cache
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.sourcelink.json
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/bin/Debug/net9.0/Loyalty.Application.deps.json
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/bin/Debug/net9.0/Loyalty.Application.dll
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/bin/Debug/net9.0/Loyalty.Application.pdb
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/bin/Debug/net9.0/Loyalty.Domain.dll
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/bin/Debug/net9.0/Loyalty.Domain.pdb
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty..441FB2C4.Up2Date
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.dll
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/refint/Loyalty.Application.dll
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/Loyalty.Application.pdb
+/Users/julietteroodhardt/Documents/GitHub/atlas-loyalty-service/src/Loyalty.Application/obj/Debug/net9.0/ref/Loyalty.Application.dll

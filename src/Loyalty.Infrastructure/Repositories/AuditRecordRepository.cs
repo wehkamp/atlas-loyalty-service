@@ -1,8 +1,6 @@
-using Amazon.Runtime.Internal.Util;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Npgsql;
-using OMS.Common.Mapper.ExtensionMethods;
 using Loyalty.Application.Commands.AuditTrail;
 using Loyalty.Application.Models;
 using Loyalty.Application.Repositories;
@@ -42,7 +40,7 @@ public class AuditRecordRepository : IAuditRecordRepository
             .Where(r => r.OrderNumber == orderNumber.Value)
             .ToArrayAsync(cancellationToken);
 
-        return response.MapTo<AuditDocument[]>();
+        return new AuditDocument[0];
     }
 
     public async Task PersistAsync(AuditTrailDbCommand auditTrailDbCommand, CancellationToken cancellationToken)

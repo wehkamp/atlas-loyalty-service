@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OMS.Common.Storage.AWS.S3bucket\OMS.Common.Storage.AWS.S3bucket.csproj" />
     <ProjectReference Include="..\Loyalty.Domain\Loyalty.Domain.csproj" />
   </ItemGroup>
 

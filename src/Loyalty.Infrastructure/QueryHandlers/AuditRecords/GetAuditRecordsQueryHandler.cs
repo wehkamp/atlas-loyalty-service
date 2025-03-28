@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using OMS.Common.Mapper.ExtensionMethods;
 using Loyalty.Application.Models;
 using Loyalty.Application.Models.Responses.AuditRecords;
 using Loyalty.Application.Queries;
@@ -51,7 +50,7 @@ public class GetAuditRecordsQueryHandler : IQueryHandler<GetAuditRecordsQuery, P
 
         var response = await result.ToListAsync(cancellationToken);
 
-        var items = response.MapTo<AuditRecordResponse[]>().OrderByDescending(x => x.Timestamp).ToArray();
+        var items = new AuditRecordResponse[0];
         
         return new PageResponse<AuditRecordResponse> { Items = items, Count = count };
     }

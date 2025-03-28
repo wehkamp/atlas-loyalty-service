@@ -28,8 +28,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\OMS.Common.Mapper\OMS.Common.Mapper.csproj" />
-    <ProjectReference Include="..\..\src\OMS.Common.Storage.AWS.S3bucket\OMS.Common.Storage.AWS.S3bucket.csproj" />
     <ProjectReference Include="..\..\src\Loyalty.Infrastructure\Loyalty.Infrastructure.csproj" />
     <ProjectReference Include="..\Loyalty.Domain.UnitTests\Loyalty.Domain.UnitTests.csproj" />
   </ItemGroup>
