@@ -83,7 +83,7 @@ public static class SwaggerExtensions
         app.UseSwagger();
         app.UseSwaggerUI(c =>
         {
-            c.SwaggerEndpoint("v1/swagger.json", "OMS Core Audit Trailing API V1");
+            c.SwaggerEndpoint("v1/swagger.json", "Loyalty Service API V1");
             c.EnableTryItOutByDefault();
             c.OAuthAdditionalQueryStringParams(new Dictionary<string, string> { { "nonce", "anyNonceStringHere" } });
             c.OAuthClientId(app.Configuration.GetSection("Authentication:Google:ClientId").Value);
