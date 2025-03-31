@@ -95,8 +95,8 @@ EXPOSE 5000
 
 # Metadata labels
 # Changing any of the values below, you need to manually trigger for all environments the 'monolitic-seed' job in Jenkins CD
-LABEL blaze.service.id="oms-core-audit-trail" \
-  blaze.service.name="atlas-oms-core-audit-trail-service" \
+LABEL blaze.service.id="atlas-loyalty-service" \
+  blaze.service.name="atlas-loyalty-service" \
   blaze.service.version="${TAG}" \
   blaze.service.team="order-management" \
   blaze.service.main-language="dotnet" \
