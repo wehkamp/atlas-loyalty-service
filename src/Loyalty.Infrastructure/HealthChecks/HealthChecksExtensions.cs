@@ -11,8 +11,8 @@ public static class HealthChecksExtensions
     public static IServiceCollection AddFraudHealthChecks(this IServiceCollection services)
     {
         services.AddHealthChecks()
-            .AddCheck<OmsCoreDbContextHealthCheck<OmsCoreAuditTrailReaderDbContext>>(nameof(OmsCoreAuditTrailReaderDbContext))
-            .AddCheck<OmsCoreDbContextHealthCheck<OmsCoreAuditTrailWriterDbContext>>(nameof(OmsCoreAuditTrailWriterDbContext))
+            //.AddCheck<OmsCoreDbContextHealthCheck<OmsCoreAuditTrailReaderDbContext>>(nameof(OmsCoreAuditTrailReaderDbContext))
+            //.AddCheck<OmsCoreDbContextHealthCheck<OmsCoreAuditTrailWriterDbContext>>(nameof(OmsCoreAuditTrailWriterDbContext))
             .AddCheck<KafkaHealthCheck>("Kafka");
 
         return services;
